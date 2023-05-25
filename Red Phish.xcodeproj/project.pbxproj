@@ -1,0 +1,966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE4D136E2A1FD82900FE795C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D136D2A1FD82900FE795C /* AppDelegate.swift */; };
+		CE4D13702A1FD82900FE795C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D136F2A1FD82900FE795C /* SceneDelegate.swift */; };
+		CE4D13732A1FD82900FE795C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13712A1FD82900FE795C /* LaunchScreen.storyboard */; };
+		CE4D13762A1FD82900FE795C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13742A1FD82900FE795C /* Main.storyboard */; };
+		CE4D137F2A1FD82900FE795C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D137E2A1FD82900FE795C /* AppDelegate.swift */; };
+		CE4D13822A1FD82900FE795C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13802A1FD82900FE795C /* Main.storyboard */; };
+		CE4D13892A1FD82900FE795C /* Red Phish Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE4D13882A1FD82900FE795C /* Red Phish Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE4D13932A1FD82900FE795C /* Red Phish Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE4D13922A1FD82900FE795C /* Red Phish Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE4D13992A1FD82900FE795C /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13542A1FD82700FE795C /* Main.html */; };
+		CE4D139A2A1FD82900FE795C /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13542A1FD82700FE795C /* Main.html */; };
+		CE4D139B2A1FD82900FE795C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13562A1FD82700FE795C /* Icon.png */; };
+		CE4D139C2A1FD82900FE795C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13562A1FD82700FE795C /* Icon.png */; };
+		CE4D139D2A1FD82900FE795C /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13572A1FD82700FE795C /* Style.css */; };
+		CE4D139E2A1FD82900FE795C /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13572A1FD82700FE795C /* Style.css */; };
+		CE4D139F2A1FD82900FE795C /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13582A1FD82700FE795C /* Script.js */; };
+		CE4D13A02A1FD82900FE795C /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13582A1FD82700FE795C /* Script.js */; };
+		CE4D13A12A1FD82900FE795C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D13592A1FD82700FE795C /* ViewController.swift */; };
+		CE4D13A22A1FD82900FE795C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D13592A1FD82700FE795C /* ViewController.swift */; };
+		CE4D13A32A1FD82900FE795C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D135A2A1FD82800FE795C /* Assets.xcassets */; };
+		CE4D13A42A1FD82900FE795C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D135A2A1FD82800FE795C /* Assets.xcassets */; };
+		CE4D13A52A1FD82900FE795C /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D135C2A1FD82800FE795C /* SafariWebExtensionHandler.swift */; };
+		CE4D13A62A1FD82900FE795C /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D135C2A1FD82800FE795C /* SafariWebExtensionHandler.swift */; };
+		CE4D13A72A1FD82900FE795C /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = CE4D135E2A1FD82800FE795C /* _locales */; };
+		CE4D13A82A1FD82900FE795C /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = CE4D135E2A1FD82800FE795C /* _locales */; };
+		CE4D13A92A1FD82900FE795C /* images in Resources */ = {isa = PBXBuildFile; fileRef = CE4D135F2A1FD82900FE795C /* images */; };
+		CE4D13AA2A1FD82900FE795C /* images in Resources */ = {isa = PBXBuildFile; fileRef = CE4D135F2A1FD82900FE795C /* images */; };
+		CE4D13AB2A1FD82900FE795C /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13602A1FD82900FE795C /* manifest.json */; };
+		CE4D13AC2A1FD82900FE795C /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13602A1FD82900FE795C /* manifest.json */; };
+		CE4D13AD2A1FD82900FE795C /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13612A1FD82900FE795C /* background.js */; };
+		CE4D13AE2A1FD82900FE795C /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13612A1FD82900FE795C /* background.js */; };
+		CE4D13AF2A1FD82900FE795C /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13622A1FD82900FE795C /* content.js */; };
+		CE4D13B02A1FD82900FE795C /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13622A1FD82900FE795C /* content.js */; };
+		CE4D13B12A1FD82900FE795C /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13632A1FD82900FE795C /* popup.html */; };
+		CE4D13B22A1FD82900FE795C /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13632A1FD82900FE795C /* popup.html */; };
+		CE4D13B32A1FD82900FE795C /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13642A1FD82900FE795C /* popup.css */; };
+		CE4D13B42A1FD82900FE795C /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13642A1FD82900FE795C /* popup.css */; };
+		CE4D13B52A1FD82900FE795C /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13652A1FD82900FE795C /* popup.js */; };
+		CE4D13B62A1FD82900FE795C /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13652A1FD82900FE795C /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE4D138A2A1FD82900FE795C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4D134E2A1FD82600FE795C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4D13872A1FD82900FE795C;
+			remoteInfo = "Red Phish Extension (iOS)";
+		};
+		CE4D13942A1FD82900FE795C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4D134E2A1FD82600FE795C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4D13912A1FD82900FE795C;
+			remoteInfo = "Red Phish Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE4D13BC2A1FD82900FE795C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE4D13892A1FD82900FE795C /* Red Phish Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D13C32A1FD82900FE795C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE4D13932A1FD82900FE795C /* Red Phish Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE4D13552A1FD82700FE795C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		CE4D13562A1FD82700FE795C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CE4D13572A1FD82700FE795C /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		CE4D13582A1FD82700FE795C /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		CE4D13592A1FD82700FE795C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE4D135A2A1FD82800FE795C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE4D135C2A1FD82800FE795C /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		CE4D135E2A1FD82800FE795C /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		CE4D135F2A1FD82900FE795C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		CE4D13602A1FD82900FE795C /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		CE4D13612A1FD82900FE795C /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		CE4D13622A1FD82900FE795C /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		CE4D13632A1FD82900FE795C /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		CE4D13642A1FD82900FE795C /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		CE4D13652A1FD82900FE795C /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		CE4D136A2A1FD82900FE795C /* Red Phish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red Phish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4D136D2A1FD82900FE795C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE4D136F2A1FD82900FE795C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE4D13722A1FD82900FE795C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE4D13752A1FD82900FE795C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE4D13772A1FD82900FE795C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4D137C2A1FD82900FE795C /* Red Phish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red Phish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4D137E2A1FD82900FE795C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE4D13812A1FD82900FE795C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE4D13832A1FD82900FE795C /* Red Phish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Red Phish.entitlements"; sourceTree = "<group>"; };
+		CE4D13882A1FD82900FE795C /* Red Phish Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Red Phish Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4D138D2A1FD82900FE795C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4D13922A1FD82900FE795C /* Red Phish Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Red Phish Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4D13972A1FD82900FE795C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4D13982A1FD82900FE795C /* Red Phish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Red Phish.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE4D13672A1FD82900FE795C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D13792A1FD82900FE795C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D13852A1FD82900FE795C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D138F2A1FD82900FE795C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE4D134D2A1FD82600FE795C = {
+			isa = PBXGroup;
+			children = (
+				CE4D13522A1FD82700FE795C /* Shared (App) */,
+				CE4D135B2A1FD82800FE795C /* Shared (Extension) */,
+				CE4D136C2A1FD82900FE795C /* iOS (App) */,
+				CE4D137D2A1FD82900FE795C /* macOS (App) */,
+				CE4D138C2A1FD82900FE795C /* iOS (Extension) */,
+				CE4D13962A1FD82900FE795C /* macOS (Extension) */,
+				CE4D136B2A1FD82900FE795C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE4D13522A1FD82700FE795C /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D13592A1FD82700FE795C /* ViewController.swift */,
+				CE4D135A2A1FD82800FE795C /* Assets.xcassets */,
+				CE4D13532A1FD82700FE795C /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		CE4D13532A1FD82700FE795C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D13542A1FD82700FE795C /* Main.html */,
+				CE4D13562A1FD82700FE795C /* Icon.png */,
+				CE4D13572A1FD82700FE795C /* Style.css */,
+				CE4D13582A1FD82700FE795C /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE4D135B2A1FD82800FE795C /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D135C2A1FD82800FE795C /* SafariWebExtensionHandler.swift */,
+				CE4D135D2A1FD82800FE795C /* Resources */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		CE4D135D2A1FD82800FE795C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D135E2A1FD82800FE795C /* _locales */,
+				CE4D135F2A1FD82900FE795C /* images */,
+				CE4D13602A1FD82900FE795C /* manifest.json */,
+				CE4D13612A1FD82900FE795C /* background.js */,
+				CE4D13622A1FD82900FE795C /* content.js */,
+				CE4D13632A1FD82900FE795C /* popup.html */,
+				CE4D13642A1FD82900FE795C /* popup.css */,
+				CE4D13652A1FD82900FE795C /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE4D136B2A1FD82900FE795C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D136A2A1FD82900FE795C /* Red Phish.app */,
+				CE4D137C2A1FD82900FE795C /* Red Phish.app */,
+				CE4D13882A1FD82900FE795C /* Red Phish Extension.appex */,
+				CE4D13922A1FD82900FE795C /* Red Phish Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE4D136C2A1FD82900FE795C /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D136D2A1FD82900FE795C /* AppDelegate.swift */,
+				CE4D136F2A1FD82900FE795C /* SceneDelegate.swift */,
+				CE4D13712A1FD82900FE795C /* LaunchScreen.storyboard */,
+				CE4D13742A1FD82900FE795C /* Main.storyboard */,
+				CE4D13772A1FD82900FE795C /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		CE4D137D2A1FD82900FE795C /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D137E2A1FD82900FE795C /* AppDelegate.swift */,
+				CE4D13802A1FD82900FE795C /* Main.storyboard */,
+				CE4D13832A1FD82900FE795C /* Red Phish.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		CE4D138C2A1FD82900FE795C /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D138D2A1FD82900FE795C /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		CE4D13962A1FD82900FE795C /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D13972A1FD82900FE795C /* Info.plist */,
+				CE4D13982A1FD82900FE795C /* Red Phish.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE4D13692A1FD82900FE795C /* Red Phish (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4D13BD2A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish (iOS)" */;
+			buildPhases = (
+				CE4D13662A1FD82900FE795C /* Sources */,
+				CE4D13672A1FD82900FE795C /* Frameworks */,
+				CE4D13682A1FD82900FE795C /* Resources */,
+				CE4D13BC2A1FD82900FE795C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4D138B2A1FD82900FE795C /* PBXTargetDependency */,
+			);
+			name = "Red Phish (iOS)";
+			productName = "Red Phish (iOS)";
+			productReference = CE4D136A2A1FD82900FE795C /* Red Phish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE4D137B2A1FD82900FE795C /* Red Phish (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4D13C42A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish (macOS)" */;
+			buildPhases = (
+				CE4D13782A1FD82900FE795C /* Sources */,
+				CE4D13792A1FD82900FE795C /* Frameworks */,
+				CE4D137A2A1FD82900FE795C /* Resources */,
+				CE4D13C32A1FD82900FE795C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4D13952A1FD82900FE795C /* PBXTargetDependency */,
+			);
+			name = "Red Phish (macOS)";
+			productName = "Red Phish (macOS)";
+			productReference = CE4D137C2A1FD82900FE795C /* Red Phish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE4D13872A1FD82900FE795C /* Red Phish Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4D13B92A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish Extension (iOS)" */;
+			buildPhases = (
+				CE4D13842A1FD82900FE795C /* Sources */,
+				CE4D13852A1FD82900FE795C /* Frameworks */,
+				CE4D13862A1FD82900FE795C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Red Phish Extension (iOS)";
+			productName = "Red Phish Extension (iOS)";
+			productReference = CE4D13882A1FD82900FE795C /* Red Phish Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		CE4D13912A1FD82900FE795C /* Red Phish Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4D13C02A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish Extension (macOS)" */;
+			buildPhases = (
+				CE4D138E2A1FD82900FE795C /* Sources */,
+				CE4D138F2A1FD82900FE795C /* Frameworks */,
+				CE4D13902A1FD82900FE795C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Red Phish Extension (macOS)";
+			productName = "Red Phish Extension (macOS)";
+			productReference = CE4D13922A1FD82900FE795C /* Red Phish Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE4D134E2A1FD82600FE795C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CE4D13692A1FD82900FE795C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE4D137B2A1FD82900FE795C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE4D13872A1FD82900FE795C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE4D13912A1FD82900FE795C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = CE4D13512A1FD82600FE795C /* Build configuration list for PBXProject "Red Phish" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE4D134D2A1FD82600FE795C;
+			productRefGroup = CE4D136B2A1FD82900FE795C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE4D13692A1FD82900FE795C /* Red Phish (iOS) */,
+				CE4D137B2A1FD82900FE795C /* Red Phish (macOS) */,
+				CE4D13872A1FD82900FE795C /* Red Phish Extension (iOS) */,
+				CE4D13912A1FD82900FE795C /* Red Phish Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE4D13682A1FD82900FE795C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D139B2A1FD82900FE795C /* Icon.png in Resources */,
+				CE4D13732A1FD82900FE795C /* LaunchScreen.storyboard in Resources */,
+				CE4D13992A1FD82900FE795C /* Main.html in Resources */,
+				CE4D139F2A1FD82900FE795C /* Script.js in Resources */,
+				CE4D13A32A1FD82900FE795C /* Assets.xcassets in Resources */,
+				CE4D13762A1FD82900FE795C /* Main.storyboard in Resources */,
+				CE4D139D2A1FD82900FE795C /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D137A2A1FD82900FE795C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D139C2A1FD82900FE795C /* Icon.png in Resources */,
+				CE4D139E2A1FD82900FE795C /* Style.css in Resources */,
+				CE4D13822A1FD82900FE795C /* Main.storyboard in Resources */,
+				CE4D13A02A1FD82900FE795C /* Script.js in Resources */,
+				CE4D13A42A1FD82900FE795C /* Assets.xcassets in Resources */,
+				CE4D139A2A1FD82900FE795C /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D13862A1FD82900FE795C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D13AD2A1FD82900FE795C /* background.js in Resources */,
+				CE4D13B32A1FD82900FE795C /* popup.css in Resources */,
+				CE4D13B12A1FD82900FE795C /* popup.html in Resources */,
+				CE4D13A92A1FD82900FE795C /* images in Resources */,
+				CE4D13AB2A1FD82900FE795C /* manifest.json in Resources */,
+				CE4D13A72A1FD82900FE795C /* _locales in Resources */,
+				CE4D13AF2A1FD82900FE795C /* content.js in Resources */,
+				CE4D13B52A1FD82900FE795C /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D13902A1FD82900FE795C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D13AE2A1FD82900FE795C /* background.js in Resources */,
+				CE4D13B42A1FD82900FE795C /* popup.css in Resources */,
+				CE4D13B22A1FD82900FE795C /* popup.html in Resources */,
+				CE4D13AA2A1FD82900FE795C /* images in Resources */,
+				CE4D13AC2A1FD82900FE795C /* manifest.json in Resources */,
+				CE4D13A82A1FD82900FE795C /* _locales in Resources */,
+				CE4D13B02A1FD82900FE795C /* content.js in Resources */,
+				CE4D13B62A1FD82900FE795C /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE4D13662A1FD82900FE795C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D13A12A1FD82900FE795C /* ViewController.swift in Sources */,
+				CE4D136E2A1FD82900FE795C /* AppDelegate.swift in Sources */,
+				CE4D13702A1FD82900FE795C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D13782A1FD82900FE795C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D13A22A1FD82900FE795C /* ViewController.swift in Sources */,
+				CE4D137F2A1FD82900FE795C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D13842A1FD82900FE795C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D13A52A1FD82900FE795C /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D138E2A1FD82900FE795C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4D13A62A1FD82900FE795C /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE4D138B2A1FD82900FE795C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE4D13872A1FD82900FE795C /* Red Phish Extension (iOS) */;
+			targetProxy = CE4D138A2A1FD82900FE795C /* PBXContainerItemProxy */;
+		};
+		CE4D13952A1FD82900FE795C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE4D13912A1FD82900FE795C /* Red Phish Extension (macOS) */;
+			targetProxy = CE4D13942A1FD82900FE795C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE4D13542A1FD82700FE795C /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4D13552A1FD82700FE795C /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		CE4D13712A1FD82900FE795C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4D13722A1FD82900FE795C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CE4D13742A1FD82900FE795C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4D13752A1FD82900FE795C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE4D13802A1FD82900FE795C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4D13812A1FD82900FE795C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE4D13B72A1FD82900FE795C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE4D13B82A1FD82900FE795C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CE4D13BA2A1FD82900FE795C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish.Extension";
+				PRODUCT_NAME = "Red Phish Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE4D13BB2A1FD82900FE795C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish.Extension";
+				PRODUCT_NAME = "Red Phish Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE4D13BE2A1FD82900FE795C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish";
+				PRODUCT_NAME = "Red Phish";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE4D13BF2A1FD82900FE795C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish";
+				PRODUCT_NAME = "Red Phish";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE4D13C12A1FD82900FE795C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Red Phish.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish.Extension";
+				PRODUCT_NAME = "Red Phish Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE4D13C22A1FD82900FE795C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Red Phish.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish.Extension";
+				PRODUCT_NAME = "Red Phish Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CE4D13C52A1FD82900FE795C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Red Phish.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish";
+				PRODUCT_NAME = "Red Phish";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE4D13C62A1FD82900FE795C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Red Phish.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FC6QKWA93F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Red Phish";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.swifter.Red-Phish";
+				PRODUCT_NAME = "Red Phish";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE4D13512A1FD82600FE795C /* Build configuration list for PBXProject "Red Phish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4D13B72A1FD82900FE795C /* Debug */,
+				CE4D13B82A1FD82900FE795C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4D13B92A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4D13BA2A1FD82900FE795C /* Debug */,
+				CE4D13BB2A1FD82900FE795C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4D13BD2A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4D13BE2A1FD82900FE795C /* Debug */,
+				CE4D13BF2A1FD82900FE795C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4D13C02A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4D13C12A1FD82900FE795C /* Debug */,
+				CE4D13C22A1FD82900FE795C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4D13C42A1FD82900FE795C /* Build configuration list for PBXNativeTarget "Red Phish (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4D13C52A1FD82900FE795C /* Debug */,
+				CE4D13C62A1FD82900FE795C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE4D134E2A1FD82600FE795C /* Project object */;
+}
