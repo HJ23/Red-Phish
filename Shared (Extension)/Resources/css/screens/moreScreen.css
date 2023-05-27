@@ -1,0 +1,251 @@
+#moreScreen .popUpHeader {
+    display: flex;
+    position: fixed;
+    background: var(--color-4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    opacity: 0.9;
+    box-sizing: border-box;
+}
+
+#moreScreen #fromMoreToMain {
+    cursor: pointer;
+    padding: 1px 1.5px;
+}
+
+#moreScreen #fromMoreToMain i {
+    font-size: 23px;
+    color: var(--color-1);
+    transition: 0.15s;
+}
+
+#moreScreen #fromMoreToMain:hover i {
+    color: var(--color-1-hover);
+}
+
+#moreScreen .popUpBody {
+    padding-top: 40px;
+    text-align: left;
+}
+
+#moreScreen .popUpMenuList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-3);
+    text-decoration: none;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+#moreScreen .popUpMenuList:hover {
+    opacity: 0.8;
+}
+
+#moreScreen .popUpMenuList .leadingPart {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#moreScreen .popUpMenuList .trailingPart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--color-1);
+}
+
+#moreScreen .popUpMenuList i {
+    font-size: 14px;
+    transition: 0.15s;
+}
+
+#moreScreen .popUpMenuList .iconWrapper {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#moreScreen .popUpMenuList .leadingPart .headline {
+    font-size: 14px;
+    text-align: left;
+    display: block;
+}
+
+#moreScreen .popUpMenuList .leadingPart .subheadline {
+    font-size: 13px;
+    text-align: left;
+    color: var(--color-1);
+    line-height: 20px;
+}
+
+#moreScreen .popUpMenuList .trailingPart span {
+    font-size: 14px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+#moreScreen .popUpMenuListGroupHeader {
+    font-size: 12px;
+    color: var(--color-1);
+    margin-bottom: 5px;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+#moreScreen .popUpListGroupBody {
+    background: var(--color-5);
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+
+#moreScreen .popUpListGroupBody.noMb {
+    margin-bottom: 0;
+}
+
+#moreScreen .popUpListGroupBody .popUpMenuList {
+    border-bottom: 1px solid var(--color-10);
+    padding: 10px 0;
+    transition: 0.15s;
+}
+
+#moreScreen .popUpListGroupBody .popUpMenuList:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+#moreScreen .popUpMenuList .trailingPart select {
+    -webkit-appearance: none;
+    outline: 0;
+    border: none;
+    font-size: 14px;
+    padding: 0 5px 1px 10px;
+    box-shadow: none;
+    background: 0 0 !important;
+    color: var(--color-1);
+    cursor: pointer;
+    transition: 0.15s;
+    text-align-last: right;
+}
+
+
+/* Fast Check */
+#moreScreen .accountToken {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#moreScreen .accountToken {
+    position: relative;
+}
+
+#moreScreen .accountToken #accountTokenField {
+    width: 100%;
+    padding: 10px;
+    padding-left: 31px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 7px;
+    background: var(--color-5);
+    position: relative;
+    color: var(--color-3);
+}
+
+#moreScreen .accountToken:after {
+    color: var(--color-1);
+    font-family: "Font Awesome 6 Free";
+    content: "\f084";
+    font-size: 12px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    pointer-events: none;
+}
+
+#moreScreen .accountToken #submitAccountTokenUpdate {
+    cursor: pointer;
+    background-color: #1E64CF;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    transition: 0.15s;
+}
+
+#moreScreen .accountToken #submitAccountTokenUpdate:hover {
+    background-color: #0c55c6;
+}
+/* Fast Check */
+
+
+/* Slider */
+#moreScreen .switchLabel {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+#moreScreen .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#moreScreen .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-11);
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+#moreScreen .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 1.5px;
+    bottom: 1.7px;
+    background-color: #fff;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+#moreScreen .slider:hover {
+    opacity: 0.9;
+}
+
+#moreScreen input:checked + .slider {
+    background-color: var(--color-7);
+}
+
+#moreScreen input:focus + .slider {
+    box-shadow: 0 0 1px var(--color-7);
+}
+
+#moreScreen input:checked + .slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
+}
+
+#moreScreen .slider.round {
+    border-radius: 34px;
+}
+
+#moreScreen .slider.round:before {
+    border-radius: 50%;
+}
+/* Slider */

@@ -1,0 +1,176 @@
+/* Header */
+.topHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    position: relative;
+}
+
+.topHeader .topHeaderLeft {
+    justify-content: flex-begin;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.topHeader .topHeaderRight {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.topHeader .topHeaderCenter {
+    width: 40%;
+    color: var(--color-1);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.topHeader .topHeaderButton {
+    cursor: pointer;
+}
+
+.topHeader .topHeaderButton i {
+    color: var(--color-1);
+    font-size: 23px;
+    transition: 0.15s;
+}
+
+.topHeader .topHeaderLeft .topHeaderButton {
+    margin-left: 15px;
+}
+
+.topHeader #fromMainToMore {
+    margin-left: 0;
+}
+
+.topHeader #fromMainToMore:hover i {
+    color: var(--color-1-hover);
+}
+
+.topHeader #powerButton i {
+    color: var(--color-9);
+}
+
+.topHeader #powerButton[active] i {
+    color: var(--color-8);
+}
+
+.topHeader #powerButton[active]:hover i {
+    color: var(--color-8-hover);
+}
+
+.topHeader #powerButton:not([active]):hover i {
+    color: var(--color-9-hover);
+}
+/* Header */
+
+
+/* Fast Check */
+.fastCheck {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fastCheck {
+    margin-top: 25px;
+    position: relative;
+}
+
+.fastCheck #fastCheckField {
+    width: 100%;
+    padding: 10px;
+    padding-left: 31px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 7px;
+    background: var(--color-5);
+    position: relative;
+    color: var(--color-3);
+}
+
+.fastCheck:after {
+    color: var(--color-1);
+    font-family: "Font Awesome 6 Free";
+    content: "\f002";
+    font-size: 12px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    pointer-events: none;
+}
+
+.fastCheck #submitFastCheck {
+    cursor: pointer;
+    background-color: #1E64CF;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    transition: 0.15s;
+}
+
+.fastCheck #submitFastCheck:hover {
+    background-color: #0c55c6;
+}
+/* Fast Check */
+
+
+/* Nothing Found State */
+#mainScreen #searchMessage {
+    padding: 30px 0 0 0;
+    display: none;
+}
+
+#mainScreen #searchMessage .searchMessageIcon {
+    color: var(--color-1);
+    margin-bottom: 10px;
+    font-size: 34px;
+}
+
+#mainScreen #searchMessage .searchMessageHeadline {
+    font-size: 16px;
+    color: var(--color-1);
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 24px;
+}
+
+#mainScreen #searchMessage .searchMessageSubhedline {
+    font-size: 14px;
+    color: var(--color-2);
+    line-height: 22px;
+}
+/* Nothing Found State */
+
+
+/* Power Off State */
+#mainScreen #disableMessage {
+    display: none;
+    padding: 30px 0 20px 0;
+}
+
+#mainScreen #disableMessage .disableMessageIcon {
+    color: var(--color-1);
+    margin-bottom: 10px;
+    font-size: 34px;
+}
+
+#mainScreen #disableMessage .disableMessageHeadline {
+    font-size: 16px;
+    color: var(--color-1);
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 24px;
+}
+
+#mainScreen #disableMessage .disableMessageSubhedline {
+    font-size: 14px;
+    color: var(--color-2);
+    line-height: 22px;
+}
+/* Disable State */

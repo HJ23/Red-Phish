@@ -1,0 +1,58 @@
+/* Welcome Token Field */
+.welcomeTokenFieldWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcomeTokenFieldWrapper {
+    position: relative;
+}
+
+.welcomeTokenFieldWrapper #welcomeTokenField {
+    width: 100%;
+    padding: 10px;
+    padding-left: 31px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 7px;
+    background: var(--color-5);
+    position: relative;
+    color: var(--color-3);
+}
+
+.welcomeTokenFieldWrapper:after {
+    color: var(--color-1);
+    font-family: "Font Awesome 6 Free";
+    content: "\f084";
+    font-size: 12px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    pointer-events: none;
+}
+
+.welcomeTokenFieldWrapper #submitWelcomeToken {
+    cursor: pointer;
+    background-color: #1E64CF;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    transition: 0.15s;
+}
+
+.welcomeTokenFieldWrapper #submitWelcomeToken:hover {
+    background-color: #0c55c6;
+}
+/* Welcome Token Field */
+
+#welcomeTokenScreen .information {
+    font-size: 13px;
+    text-align: left;
+    padding-left: 15px;
+    color: var(--color-2);
+    line-height: 20px;
+    margin-top: 15px;
+}
