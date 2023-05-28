@@ -29,21 +29,64 @@
                 <div id="fromMainToMore" class="topHeaderButton" title="More">
                     <i class="fa-solid fa-gear"></i>
                 </div>
+                
+                <div id="fromMainToAnalytics" class="topHeaderButton" title="Analytics">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
             </div>
             
             <div class="topHeaderCenter">Red Phish</div>
             
             <div class="topHeaderRight">
-                <div id="powerButton" class="topHeaderButton" title="On/Off" active="">
+                <div id="powerButton" class="topHeaderButton" title="On/Off" active>
                     <i class="fa-solid fa-power-off"></i>
                 </div>
             </div>
         </div>
         
-        <div class="fastCheck">
-            <input type="text" placeholder="Domain, IP, URL, Hash, Email, Phone..." id="fastCheckField">
-            <button type="button" id="submitFastCheck">Check</button>
+        <div id="mainFunctionalPart">
+            <div class="fastCheckWrapper">
+                <div class="fastCheck">
+                    <input type="text" placeholder="Domain, IP, URL or File Hash" id="fastCheckField">
+                    <button type="button" id="submitFastCheck">Check</button>
+                </div>
+                <p class="subScreenError nomb" id="fastCheckTokenError">The request cannot be empty.</p>
+                <p class="subScreenError nomb" id="fastCheckUnknownRequestError">Invalid Domain, IP, URL or Hash.</p>
+            </div>
+            
+            <div id="reportInfoWrapper">
+                <div class="reportHeader">
+                    <p id="reportType"></p>
+                    <p id="reportTarget"></p>
+                </div>
+                
+                <div class="lds-ripple" id="reportLoader"><div></div><div></div></div>
+                
+                <div class="result" id="reportResult">
+                    <div class="icon">
+                        <i class="fa-solid fa-fish-fins fa-rotate-180" id="fishIcon" data-color="green"></i>
+                    </div>
+                    <div class="info">
+                        <p class="riskScoreWrapper">Risk Score: <span id="riskScore"></span></p>
+                        <p class="verdictWrapper">Verdict: <span id="verdict"></span></p>
+                    </div>
+                    <div id="sendReportButton">Report</div>
+                </div>
+            </div>
+            
+            <div id="unableToCheckMessage" class="infoMessage">
+                <i class="fa-solid fa-file-excel infoMessageIcon"></i>
+                <p class="infoMessageHeadline">Unable to Check</p>
+                <p class="infoMessageSubheadline">This tab is not recognized as a website</p>
+            </div>
         </div>
+        
+        <div id="disableMessage" class="infoMessage">
+            <i class="fa-solid fa-plug-circle-xmark infoMessageIcon"></i>
+            <p class="infoMessageHeadline">Extension is Disabled</p>
+            <p class="infoMessageSubheadline">Press power button to enable</p>
+        </div>
+        
     </div>
     <!-------------------------------- Main Screen -------------------------------->
     
@@ -56,9 +99,13 @@
         </div>
         <div class="popUpBody">
             <div class="popUpMenuListGroupHeader">Token</div>
-            <div class="accountToken">
-                <input type="text" placeholder="Token" id="accountTokenField">
-                <button type="button" id="submitAccountTokenUpdate">Update</button>
+            <div class="accountTokenWrapper">
+                <div class="accountToken">
+                    <input type="text" placeholder="Token" id="accountTokenField">
+                    <button type="button" id="submitAccountTokenUpdate">Update</button>
+                </div>
+                <p class="subScreenError" id="accountTokenError">You have to specify token to continue.</p>
+                <p class="subScreenSuccess" id="accountTokenSuccess">Token was updated.</p>
             </div>
             
             <div class="popUpMenuListGroupHeader">Features</div>
@@ -77,7 +124,7 @@
                     </div>
                     <div class="trailingPart">
                         <label class="switchLabel switch">
-                            <input class="formCheckbox" type="checkbox" checked>
+                            <input class="formCheckbox" type="checkbox" id="redFish_FeatureEmailChecker">
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -95,7 +142,7 @@
                     </div>
                     <div class="trailingPart">
                         <label class="switchLabel switch">
-                            <input class="formCheckbox" type="checkbox">
+                            <input class="formCheckbox" type="checkbox" id="redFish_FeatureLinkHover">
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -113,7 +160,25 @@
                     </div>
                     <div class="trailingPart">
                         <label class="switchLabel switch">
-                            <input class="formCheckbox" type="checkbox">
+                            <input class="formCheckbox" type="checkbox" id="redFish_FeatureWebsiteVisitCheck">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="popUpMenuList" id="fromMoreToYoutubeBlockingSchedule">
+                    <div class="leadingPart">
+                        <div class="iconWrapper">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div>
+                            <span class="headline">Check Websites When Open an Extension</span>
+                            <span class="subheadline">Script will check and do soething</span>
+                        </div>
+                    </div>
+                    <div class="trailingPart">
+                        <label class="switchLabel switch">
+                            <input class="formCheckbox" type="checkbox" id="redFish_FeatureExtensionWebsiteCheck">
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -131,7 +196,7 @@
                     </div>
                     <div class="trailingPart">
                         <label class="switchLabel switch">
-                            <input class="formCheckbox" type="checkbox">
+                            <input class="formCheckbox" type="checkbox" id="redFish_FeatureCacheFetchedData">
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -140,7 +205,7 @@
             
             <div class="popUpMenuListGroupHeader">Contact Us</div>
             <div class="popUpListGroupBody noMb">
-                <a class="popUpMenuList" href="https://untrap.app/feature/" target="_blank">
+                <a class="popUpMenuList" href="https://forms.gle/3scumuieufqJaTvU9" target="_blank">
                     <div class="leadingPart">
                         <div class="iconWrapper">
                             <i class="fa-solid fa-lightbulb"></i>
@@ -154,7 +219,7 @@
                     </div>
                 </a>
                 
-                <a class="popUpMenuList" href="https://untrap.app/bug/" target="_blank">
+                <a class="popUpMenuList" href="https://forms.gle/3scumuieufqJaTvU9" target="_blank">
                     <div class="leadingPart">
                         <div class="iconWrapper">
                             <i class="fa-solid fa-bug"></i>
@@ -192,16 +257,18 @@
             <input type="text" placeholder="Token" id="welcomeTokenField">
             <button type="button" id="submitWelcomeToken">Set</button>
         </div>
-        <p class="subScreenError">You have to enter token to continue.</p>
+        <p class="subScreenError" id="welcomeTokenError">You have to specify token to continue.</p>
         <p class="information">You have to enter token to continue You have to enter token to continue. You have to enter token to continue you have to enter token to continue you have to enter token to continue You have to enter token to continue. You have to enter token to continue you have to enter token to continue you have to enter token to continue.</p>
     </div>
     <!-------------------------------- Welcome Token Screen -------------------------------->
     
     <!-- Scripts -->
+    <script src="constants.js"></script>
     <script src="helpers.js"></script>
+    <script src="fetch.js"></script>
+    
     <script src="mainScreen.js"></script>
     <script src="moreScreen.js"></script>
     <script src="welcomeTokenScreen.js"></script>
-    
 </body>
 </html>

@@ -1,0 +1,61 @@
+/* Text Field State */
+
+.subScreenError {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    color: var(--color-9);
+    display: none;
+    padding-left: 15px;
+    padding-top: 10px;
+    line-height: 20px;
+}
+
+.subScreenSuccess {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    color: var(--color-8);
+    display: none;
+    padding-left: 15px;
+    padding-top: 10px;
+    line-height: 20px;
+}
+
+/* Text Field State */
+
+
+/* Info Message */
+
+.infoMessage {
+    display: none;
+    padding: 30px 0 20px 0;
+}
+
+.infoMessage .infoMessageIcon {
+    color: var(--color-1);
+    margin-bottom: 10px;
+    font-size: 34px;
+}
+
+.infoMessage .infoMessageHeadline {
+    font-size: 16px;
+    color: var(--color-1);
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 24px;
+}
+
+.infoMessage .infoMessageSubheadline {
+    font-size: 14px;
+    color: var(--color-2);
+    line-height: 22px;
+}
+
+/* Info Message */
+
+.nomb {
+    margin-bottom: 0px!important;
+}

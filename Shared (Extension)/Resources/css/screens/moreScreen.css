@@ -37,11 +37,6 @@
     color: var(--color-3);
     text-decoration: none;
     transition: 0.15s;
-    cursor: pointer;
-}
-
-#moreScreen .popUpMenuList:hover {
-    opacity: 0.8;
 }
 
 #moreScreen .popUpMenuList .leadingPart {
@@ -132,10 +127,13 @@
 
 
 /* Fast Check */
+#moreScreen .accountTokenWrapper {
+    margin-bottom: 15px;
+}
+
 #moreScreen .accountToken {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
 }
 
 #moreScreen .accountToken {
@@ -168,7 +166,7 @@
 
 #moreScreen .accountToken #submitAccountTokenUpdate {
     cursor: pointer;
-    background-color: #1E64CF;
+    background-color: var(--color-7);
     border: none;
     font-size: 14px;
     padding: 10px;
@@ -178,7 +176,7 @@
 }
 
 #moreScreen .accountToken #submitAccountTokenUpdate:hover {
-    background-color: #0c55c6;
+    background-color: var(--color-7-hover);
 }
 /* Fast Check */
 

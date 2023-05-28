@@ -67,6 +67,8 @@
 		CE4D13EF2A20294200FE795C /* moreScreen.css in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13ED2A20294200FE795C /* moreScreen.css */; };
 		CE4D13F12A202C7000FE795C /* helpers.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13F02A202C7000FE795C /* helpers.js */; };
 		CE4D13F22A202C7000FE795C /* helpers.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13F02A202C7000FE795C /* helpers.js */; };
+		CEA3CC0F2A23B92D00F77AD6 /* fetch.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetch.js */; };
+		CEA3CC102A23B92D00F77AD6 /* fetch.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetch.js */; };
 		CED4E2A82A2063F60040BB2A /* mainScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2A72A2063F60040BB2A /* mainScreen.js */; };
 		CED4E2A92A2063F60040BB2A /* mainScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2A72A2063F60040BB2A /* mainScreen.js */; };
 		CED4E2AC2A2064260040BB2A /* moreScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2AB2A2064260040BB2A /* moreScreen.js */; };
@@ -77,6 +79,8 @@
 		CED4E2B32A218AD30040BB2A /* welcomeTokenScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B12A218AD30040BB2A /* welcomeTokenScreen.js */; };
 		CED4E2B52A218D790040BB2A /* global.css in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B42A218D790040BB2A /* global.css */; };
 		CED4E2B62A218D790040BB2A /* global.css in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B42A218D790040BB2A /* global.css */; };
+		CED4E2B82A2194430040BB2A /* constants.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B72A2194430040BB2A /* constants.js */; };
+		CED4E2B92A2194430040BB2A /* constants.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B72A2194430040BB2A /* constants.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,11 +167,13 @@
 		CE4D13E52A2021AC00FE795C /* theme.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = theme.css; sourceTree = "<group>"; };
 		CE4D13ED2A20294200FE795C /* moreScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = moreScreen.css; sourceTree = "<group>"; };
 		CE4D13F02A202C7000FE795C /* helpers.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = helpers.js; sourceTree = "<group>"; };
+		CEA3CC0E2A23B92D00F77AD6 /* fetch.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fetch.js; sourceTree = "<group>"; };
 		CED4E2A72A2063F60040BB2A /* mainScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mainScreen.js; sourceTree = "<group>"; };
 		CED4E2AB2A2064260040BB2A /* moreScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = moreScreen.js; sourceTree = "<group>"; };
 		CED4E2AE2A218AB40040BB2A /* welcomeTokenScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = welcomeTokenScreen.css; sourceTree = "<group>"; };
 		CED4E2B12A218AD30040BB2A /* welcomeTokenScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = welcomeTokenScreen.js; sourceTree = "<group>"; };
 		CED4E2B42A218D790040BB2A /* global.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = global.css; sourceTree = "<group>"; };
+		CED4E2B72A2194430040BB2A /* constants.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = constants.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +331,7 @@
 				CE4D13622A1FD82900FE795C /* content.js */,
 				CE4D13612A1FD82900FE795C /* background.js */,
 				CE4D13F02A202C7000FE795C /* helpers.js */,
+				CED4E2B72A2194430040BB2A /* constants.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -349,7 +356,6 @@
 				CE4D13E22A20067500FE795C /* mainScreen.css */,
 				CE4D13ED2A20294200FE795C /* moreScreen.css */,
 				CED4E2AE2A218AB40040BB2A /* welcomeTokenScreen.css */,
-				CED4E2B42A218D790040BB2A /* global.css */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4D13642A1FD82900FE795C /* general.css */,
+				CED4E2B42A218D790040BB2A /* global.css */,
 				CE4D13C92A20028900FE795C /* reset.css */,
 				CE4D13E52A2021AC00FE795C /* theme.css */,
 			);
@@ -370,6 +377,7 @@
 				CED4E2A72A2063F60040BB2A /* mainScreen.js */,
 				CED4E2AB2A2064260040BB2A /* moreScreen.js */,
 				CED4E2B12A218AD30040BB2A /* welcomeTokenScreen.js */,
+				CEA3CC0E2A23B92D00F77AD6 /* fetch.js */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -539,6 +547,7 @@
 				CE4D13E02A20063300FE795C /* fa-regular-400.ttf in Resources */,
 				CE4D13B12A1FD82900FE795C /* popup.html in Resources */,
 				CE4D13A92A1FD82900FE795C /* images in Resources */,
+				CEA3CC0F2A23B92D00F77AD6 /* fetch.js in Resources */,
 				CE4D13D42A20036800FE795C /* fontawesome.css in Resources */,
 				CE4D13AB2A1FD82900FE795C /* manifest.json in Resources */,
 				CE4D13F12A202C7000FE795C /* helpers.js in Resources */,
@@ -546,6 +555,7 @@
 				CED4E2A82A2063F60040BB2A /* mainScreen.js in Resources */,
 				CE4D13A72A1FD82900FE795C /* _locales in Resources */,
 				CE4D13AF2A1FD82900FE795C /* content.js in Resources */,
+				CED4E2B82A2194430040BB2A /* constants.js in Resources */,
 				CE4D13CD2A20031C00FE795C /* solid.css in Resources */,
 				CE4D13DE2A20063300FE795C /* fa-regular-400.woff2 in Resources */,
 				CE4D13DC2A20063300FE795C /* fa-solid-900.ttf in Resources */,
@@ -570,6 +580,7 @@
 				CE4D13E12A20063300FE795C /* fa-regular-400.ttf in Resources */,
 				CE4D13B22A1FD82900FE795C /* popup.html in Resources */,
 				CE4D13AA2A1FD82900FE795C /* images in Resources */,
+				CEA3CC102A23B92D00F77AD6 /* fetch.js in Resources */,
 				CE4D13D52A20036800FE795C /* fontawesome.css in Resources */,
 				CE4D13AC2A1FD82900FE795C /* manifest.json in Resources */,
 				CE4D13F22A202C7000FE795C /* helpers.js in Resources */,
@@ -577,6 +588,7 @@
 				CED4E2A92A2063F60040BB2A /* mainScreen.js in Resources */,
 				CE4D13A82A1FD82900FE795C /* _locales in Resources */,
 				CE4D13B02A1FD82900FE795C /* content.js in Resources */,
+				CED4E2B92A2194430040BB2A /* constants.js in Resources */,
 				CE4D13CE2A20031C00FE795C /* solid.css in Resources */,
 				CE4D13DF2A20063300FE795C /* fa-regular-400.woff2 in Resources */,
 				CE4D13DD2A20063300FE795C /* fa-solid-900.ttf in Resources */,

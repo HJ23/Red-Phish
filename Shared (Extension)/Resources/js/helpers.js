@@ -1,14 +1,3 @@
-const token = "pts_l62yrakfu3c6ezf56fh6jivzv2vcwjrf";
-const badDomain = "737updatesboeing.com";
-
-const API = {
-    Domain: 'https://domain-intel.aws.us.pangea.cloud/v1/reputation',
-    Url: 'https://url-intel.aws.us.pangea.cloud/v1/reputation',
-    Ip: 'https://ip-intel.aws.us.pangea.cloud/v1/reputation',
-    File: 'https://file-intel.aws.us.pangea.cloud/v1/reputation',
-    User: 'https://user-intel.aws.us.pangea.cloud/v1/user/breached'
-};
-
 function queryById(name) {
     return document.getElementById(name)
 }
@@ -35,3 +24,12 @@ function showDropdown(element) {
   event.initMouseEvent('mousedown', true, true, window);
   element.dispatchEvent(event);
 };
+
+function getCurrentTab() {
+    return browser.tabs.query({ currentWindow: true, active: true })
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
