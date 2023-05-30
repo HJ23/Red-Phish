@@ -33,3 +33,19 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function checkHashType(hash) {
+   const sha256Regex = /^[a-f0-9]{64}$/i;
+   const sha1Regex = /^[a-f0-9]{40}$/i;
+   const md5Regex = /^[a-f0-9]{32}$/i;
+
+   if (sha256Regex.test(hash)) {
+       return 'sha256';
+   } else if (sha1Regex.test(hash)) {
+       return 'sha1';
+   } else if (md5Regex.test(hash)) {
+       return 'md5';
+   } else {
+       return 'Unknown';
+   }
+}
+

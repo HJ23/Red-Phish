@@ -15,6 +15,7 @@
     <!-- Screens -->
     <link rel="stylesheet" href="mainScreen.css">
     <link rel="stylesheet" href="moreScreen.css">
+    <link rel="stylesheet" href="statisticsScreen.css">
     <link rel="stylesheet" href="welcomeTokenScreen.css">
     <link rel="stylesheet" href="global.css">
     
@@ -30,7 +31,7 @@
                     <i class="fa-solid fa-gear"></i>
                 </div>
                 
-                <div id="fromMainToAnalytics" class="topHeaderButton" title="Analytics">
+                <div id="fromMainToStatistics" class="topHeaderButton" title="Analytics">
                     <i class="fa-solid fa-chart-simple"></i>
                 </div>
             </div>
@@ -70,7 +71,10 @@
                         <p class="riskScoreWrapper">Risk Score: <span id="riskScore"></span></p>
                         <p class="verdictWrapper">Verdict: <span id="verdict"></span></p>
                     </div>
-                    <div id="sendReportButton">Report</div>
+                    <div id="sendReportButton" data-reported="false">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span id="sendReportButtonTitle">Report</span>
+                    </div>
                 </div>
             </div>
             
@@ -90,11 +94,52 @@
     </div>
     <!-------------------------------- Main Screen -------------------------------->
     
+    
+    <!-------------------------------- Statistics Screen -------------------------------->
+    <div class="appScreen" id="statisticsScreen">
+        <div class="popUpHeader">
+            <div title="Close" class="popupHeaderLeft">
+                <i class="fa-solid fa-xmark" id="fromStatisticsToMain"></i>
+            </div>
+            <div class="popupHeaderCenter">Statistics</div>
+            <div class="popupHeaderRight">
+                
+            </div>
+        </div>
+        <div class="popUpBody">
+            <div class="statistickBlocks">
+                <div class="statBlock">
+                    <i class="fa-solid fa-fish-fins fa-rotate-180 fishIcon" data-color="green"></i>
+                    <p class="statBlockHeadline">Benign</p>
+                    <p class="statBlockSubheadline" id="statBenign">0</p>
+                </div>
+                <div class="statBlock">
+                    <i class="fa-solid fa-fish-fins fa-rotate-180 fishIcon" data-color="yellow"></i>
+                    <p class="statBlockHeadline">Unknown</p>
+                    <p class="statBlockSubheadline" id="statUnknown">0</p>
+                </div>
+                <div class="statBlock">
+                    <i class="fa-solid fa-fish-fins fa-rotate-180 fishIcon" data-color="red"></i>
+                    <p class="statBlockHeadline">Malicious</p>
+                    <p class="statBlockSubheadline" id="statMalicious">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------- Statistics Screen -------------------------------->
+    
+    
     <!-------------------------------- More Screen -------------------------------->
     <div class="appScreen" id="moreScreen">
         <div class="popUpHeader">
-            <div id="fromMoreToMain" title="Close">
-                <i class="fa-solid fa-xmark"></i>
+            <div title="Close" class="popupHeaderLeft">
+                <i class="fa-solid fa-xmark" id="fromMoreToMain"></i>
+            </div>
+            <div class="popupHeaderCenter">
+                Settings
+            </div>
+            <div class="popupHeaderRight">
+                
             </div>
         </div>
         <div class="popUpBody">
@@ -133,28 +178,10 @@
                 <div class="popUpMenuList" id="fromMoreToYoutubeBlockingSchedule">
                     <div class="leadingPart">
                         <div class="iconWrapper">
-                            <i class="fa-solid fa-hand-pointer"></i>
-                        </div>
-                        <div>
-                            <span class="headline">Check Links on Hover</span>
-                            <span class="subheadline">Script will check and do soething</span>
-                        </div>
-                    </div>
-                    <div class="trailingPart">
-                        <label class="switchLabel switch">
-                            <input class="formCheckbox" type="checkbox" id="redFish_FeatureLinkHover">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="popUpMenuList" id="fromMoreToYoutubeBlockingSchedule">
-                    <div class="leadingPart">
-                        <div class="iconWrapper">
                             <i class="fa-solid fa-globe"></i>
                         </div>
                         <div>
-                            <span class="headline">Check Websites When Visiting</span>
+                            <span class="headline">Check When Visiting Website</span>
                             <span class="subheadline">Script will check and do soething</span>
                         </div>
                     </div>
@@ -169,10 +196,10 @@
                 <div class="popUpMenuList" id="fromMoreToYoutubeBlockingSchedule">
                     <div class="leadingPart">
                         <div class="iconWrapper">
-                            <i class="fa-solid fa-globe"></i>
+                            <i class="fa-solid fa-note-sticky"></i>
                         </div>
                         <div>
-                            <span class="headline">Check Websites When Open an Extension</span>
+                            <span class="headline">Check When Open an Extension</span>
                             <span class="subheadline">Script will check and do soething</span>
                         </div>
                     </div>
@@ -190,7 +217,7 @@
                             <i class="fa-solid fa-database"></i>
                         </div>
                         <div>
-                            <span class="headline">Cache Fetched Data</span>
+                            <span class="headline">Retrieve Cached Data</span>
                             <span class="subheadline">Script will check and do soething</span>
                         </div>
                     </div>
@@ -232,24 +259,11 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                 </a>
-                
-                <a class="popUpMenuList" href="mailto:swifterapps@gmail.com" target="_blank">
-                    <div class="leadingPart">
-                        <div class="iconWrapper">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div>
-                            <span class="headline">Write an Email</span>
-                        </div>
-                    </div>
-                    <div class="trailingPart">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </a>
             </div>
         </div>
     </div>
     <!-------------------------------- More Screen -------------------------------->
+    
     
     <!-------------------------------- Welcome Token Screen -------------------------------->
     <div class="appScreen" id="welcomeTokenScreen">
@@ -262,13 +276,16 @@
     </div>
     <!-------------------------------- Welcome Token Screen -------------------------------->
     
+    
     <!-- Scripts -->
     <script src="constants.js"></script>
     <script src="helpers.js"></script>
     <script src="fetch.js"></script>
+    <script src="report.js"></script>
     
     <script src="mainScreen.js"></script>
     <script src="moreScreen.js"></script>
+    <script src="statisticsScreen.js"></script>
     <script src="welcomeTokenScreen.js"></script>
 </body>
 </html>

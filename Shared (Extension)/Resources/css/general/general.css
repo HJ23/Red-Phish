@@ -30,6 +30,10 @@ html[presentedScreen="moreScreen"] #moreScreen {
     display: block;
 }
 
+html[presentedScreen="statisticsScreen"] #statisticsScreen {
+    display: block;
+}
+
 html[presentedScreen="welcomeTokenScreen"] #welcomeTokenScreen {
     display: block;
 }

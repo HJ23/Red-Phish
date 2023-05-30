@@ -1,125 +1,143 @@
-function fetchDomain(domain) {
-    browser.storage.local.get(StorageKey.Token, function (obj) {
+function fetchInfo(requestSrting, type) {
+    
+    // here will check if need to retrieve from cache
+    browser.storage.local.get([StorageKey.Token,
+                               StorageKey.FeatureCacheFetchedData,
+                               StorageKey.CacheStorage,
+                               StorageKey.Statistics], function (obj) {
         
         const token = obj[StorageKey.Token];
+        const retrieveFromCache = obj[StorageKey.FeatureCacheFetchedData] == null ? true : obj[StorageKey.FeatureCacheFetchedData];
         
-        startFetching(FetchType.Domain, domain);
+        var storageData = obj[StorageKey.CacheStorage] == null ? [] : obj[StorageKey.CacheStorage];
+        const foundObject = storageData.find(obj => obj.request === requestSrting);
         
-        fetch(API.Domain, {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer " + token,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({"provider": "domaintools", "domain": domain, "raw": true})
-        })
-        .then((response) => {
-            response.json().then((json) => {
-                const verdict = json.result.data.verdict;
-                const riskScore = json.result.raw_data.response.risk_score;
-
-                displayVerdict(verdict, riskScore);
-            })
-        })
-    })
-}
-
-function fetchUrl(url) {
-    browser.storage.local.get(StorageKey.Token, function (obj) {
-        const token = obj[StorageKey.Token];
+        const statsMock = { benign: 0, unknown: 0, malicious: 0 }
+        var statistic = obj[StorageKey.Statistics] == null ? statsMock :  obj[StorageKey.Statistics];
         
-        startFetching(FetchType.Url, url);
+        const reported = foundObject == null ? false : foundObject.reported;
         
-        fetch(API.Url, {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer " + token,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({"provider": "crowdstrike", "url": url})
-        })
-        .then((response) => {
-            response.json().then((json) => {
-                const verdict = json.result.data.verdict;
-                const riskScore = json.result.data.score;
+        if (retrieveFromCache && foundObject != null) {
+            startFetching(requestSrting, type);
+            displayVerdict(foundObject.verdict, foundObject.riskScore, type, reported);
+            
+            if (foundObject.reported) {
+                queryById("sendReportButton").setAttribute("data-reported", true);
+                queryById("sendReportButton").innerHTML = "Reported";
+            }
+        } else {
+            if (token != null) {
+                startFetching(requestSrting, type);
                 
-                displayVerdict(verdict, riskScore);
-            })
-        })
-        
+                fetch(type.endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Authorization": "Bearer " + token,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(getBodyForFetch(requestSrting, type))
+                })
+                .then((response) => {
+                    response.json().then((json) => {
+                        const verdict = getVerdictResults(json, type).verdict;
+                        const riskScore = getVerdictResults(json, type).riskScore;
+                        
+                        displayVerdict(verdict, riskScore, type, reported);
+                        
+                        // Set reported button state
+                        if (foundObject != null && foundObject.reported == true) {
+                            queryById("sendReportButton").setAttribute("data-reported", true);
+                            queryById("sendReportButton").innerHTML = "Reported";
+                        }
+                        
+                        // Check if storage already containts same request
+                        const containsObjectWithParameter = storageData.some(obj => obj.request === requestSrting);
+                        
+                        if (containsObjectWithParameter == false) {
+                            const newDataToStore = {
+                                "request": requestSrting,
+                                "type": type,
+                                "verdict": verdict,
+                                "riskScore": riskScore,
+                                "reported": false
+                            }
+                            
+                            storageData.push(newDataToStore);
+                            
+                            setToStorage(StorageKey.CacheStorage, storageData, function() {});
+                            
+                            // Update stats
+                            if (verdict == "benign") {
+                                statistic.benign += 1;
+                            } else if (verdict == "malicious") {
+                                statistic.malicious += 1;
+                            } else {
+                                statistic.unknown += 1;
+                            }
+                            
+                            setToStorage(StorageKey.Statistics, statistic, function() {});
+                        }
+                    })
+                })
+            }
+        }
     })
 }
 
-function fetchIp(ip) {
-    browser.storage.local.get(StorageKey.Token, function (obj) {
-        const token = obj[StorageKey.Token];
-        
-        startFetching(FetchType.Ip, ip);
-        
-        fetch(API.Ip, {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer " + token,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({"provider": "crowdstrike", "ip": ip})
-        })
-        .then((response) => {
-            response.json().then((json) => {
-                const verdict = json.result.data.verdict;
-                const riskScore = json.result.data.score;
-
-                displayVerdict(verdict, riskScore);
-            })
-        })
-        
-    })
+function getBodyForFetch(requestSrting, type) {
+    if (type == API.Domain) {
+        return { "provider": "domaintools", "domain": requestSrting, "raw": true }
+    } else if (type == API.URL) {
+        return { "provider": "crowdstrike", "url": requestSrting }
+    } else if (type == API.IP) {
+        return {"provider": "crowdstrike", "ip": requestSrting}
+    } else if (type == API.Hash) {
+        var hashType = checkHashType(requestSrting);
+        return {"provider": "crowdstrike", "hash": requestSrting, "hash_type": hashType }
+    }
 }
 
-function fetchHash(hash, hashType) {
-    browser.storage.local.get(StorageKey.Token, function (obj) {
-        const token = obj[StorageKey.Token];
-        
-        startFetching(FetchType.File, hash);
-        
-        fetch(API.File, {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer " + token,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({"provider": "crowdstrike", "hash": hash, "hash_type": hashType })
-        })
-        .then((response) => {
-            response.json().then((json) => {
-                const verdict = json.result.data.verdict;
-                const riskScore = json.result.data.score;
-
-                displayVerdict(verdict, riskScore);
-            })
-        })
-        
-    })
+function getVerdictResults(json, type) {
+    if (type == API.Domain) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.raw_data.response.risk_score }
+    } else if (type == API.URL) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
+    } else if (type == API.IP) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
+    } else if (type == API.Hash) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
+    }
 }
 
-function startFetching(type, target) {
+function startFetching(requestSrting, type) {
+    queryById("reportTarget").innerHTML = requestSrting;
+    queryById("reportType").innerHTML = type.headline;
     queryById("reportInfoWrapper").style.display = "block";
-    queryById("reportType").innerHTML = type;
-    queryById("reportTarget").innerHTML = target;
-         
     queryById("reportLoader").style.display = "inline-block";
     queryById("reportResult").style.display = "none";
     queryById("fastCheckField").value = "";
 }
 
-function displayVerdict(verdict, riskScore) {
+function displayVerdict(verdict, riskScore, type, reported) {
+    queryById("sendReportButton").style.display = "none";
     setVerdictFish(verdict);
-    
     queryById("reportLoader").style.display = "none";
-    
     queryById("verdict").innerHTML = capitalizeFirstLetter(verdict);
     queryById("riskScore").innerHTML = riskScore;
     queryById("reportResult").style.display = "flex";
+    
+    // Show report button only for Domain, URL and IP requests
+    
+    if (type != API.Hash) {
+        queryById("sendReportButton").style.display = "flex";
+    }
+    
+    // Check if reported
+    
+    if (reported == true) {
+        queryById("sendReportButton").setAttribute("data-reported", "true");
+        queryById("sendReportButtonTitle").innerHTML = "Reported";
+    }
 }
 
 function setVerdictFish(verdict) {

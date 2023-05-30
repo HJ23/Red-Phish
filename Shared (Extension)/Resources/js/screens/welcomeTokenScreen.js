@@ -6,7 +6,6 @@
     
     queryById("submitWelcomeToken").onclick = function () {
         const tokenValue = queryById("welcomeTokenField").value;
-        console.log(tokenValue);
         
         if (tokenValue == "") {
             queryById("welcomeTokenError").style.display = "block";

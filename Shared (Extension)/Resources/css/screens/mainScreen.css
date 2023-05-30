@@ -25,7 +25,7 @@
     width: 40%;
     color: var(--color-1);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .topHeader .topHeaderButton {
@@ -182,25 +182,43 @@
     font-size: 14px;
 }
 #reportInfoWrapper .result .info .riskScoreWrapper {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 #reportInfoWrapper #sendReportButton {
     color: #fff;
     margin-left: auto;
-    border: 1.5px solid var(--color-7);
+    border: 1.5px solid var(--color-9);
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 7px;
     transition: 0.15s;
     color: var(--color-1);
+    display: none;
 }
 
-#reportInfoWrapper #sendReportButton:hover {
-    border: 2px solid var(--color-7-hover);
-    background: var(--color-7-hover);
+#reportInfoWrapper #sendReportButton:not([data-reported="true"]):hover {
+    border: 2px solid var(--color-9-hover);
+    background: var(--color-9-hover);
     cursor: pointer;
     color: #fff;
+}
+
+#reportInfoWrapper #sendReportButton[data-reported="true"] {
+    background: var(--color-9-hover);
+    border: 2px solid var(--color-9-hover);
+    color: #fff;
+}
+
+#reportInfoWrapper #sendReportButton i {
+    display: none;
+}
+
+#reportInfoWrapper #sendReportButton[data-reported="true"] i {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    cursor: default;
 }
 /* Report Info */
 

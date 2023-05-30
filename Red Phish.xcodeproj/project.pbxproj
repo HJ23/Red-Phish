@@ -69,6 +69,12 @@
 		CE4D13F22A202C7000FE795C /* helpers.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13F02A202C7000FE795C /* helpers.js */; };
 		CEA3CC0F2A23B92D00F77AD6 /* fetch.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetch.js */; };
 		CEA3CC102A23B92D00F77AD6 /* fetch.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetch.js */; };
+		CEAEEB302A2577AB00BD4C33 /* report.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB2F2A2577AB00BD4C33 /* report.js */; };
+		CEAEEB312A2577AB00BD4C33 /* report.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB2F2A2577AB00BD4C33 /* report.js */; };
+		CEAEEB332A2587DF00BD4C33 /* statisticsScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB322A2587DF00BD4C33 /* statisticsScreen.js */; };
+		CEAEEB342A2587DF00BD4C33 /* statisticsScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB322A2587DF00BD4C33 /* statisticsScreen.js */; };
+		CEAEEB362A25881600BD4C33 /* statisticsScreen.css in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB352A25881600BD4C33 /* statisticsScreen.css */; };
+		CEAEEB372A25881600BD4C33 /* statisticsScreen.css in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB352A25881600BD4C33 /* statisticsScreen.css */; };
 		CED4E2A82A2063F60040BB2A /* mainScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2A72A2063F60040BB2A /* mainScreen.js */; };
 		CED4E2A92A2063F60040BB2A /* mainScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2A72A2063F60040BB2A /* mainScreen.js */; };
 		CED4E2AC2A2064260040BB2A /* moreScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2AB2A2064260040BB2A /* moreScreen.js */; };
@@ -168,6 +174,9 @@
 		CE4D13ED2A20294200FE795C /* moreScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = moreScreen.css; sourceTree = "<group>"; };
 		CE4D13F02A202C7000FE795C /* helpers.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = helpers.js; sourceTree = "<group>"; };
 		CEA3CC0E2A23B92D00F77AD6 /* fetch.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fetch.js; sourceTree = "<group>"; };
+		CEAEEB2F2A2577AB00BD4C33 /* report.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = report.js; sourceTree = "<group>"; };
+		CEAEEB322A2587DF00BD4C33 /* statisticsScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = statisticsScreen.js; sourceTree = "<group>"; };
+		CEAEEB352A25881600BD4C33 /* statisticsScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = statisticsScreen.css; sourceTree = "<group>"; };
 		CED4E2A72A2063F60040BB2A /* mainScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mainScreen.js; sourceTree = "<group>"; };
 		CED4E2AB2A2064260040BB2A /* moreScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = moreScreen.js; sourceTree = "<group>"; };
 		CED4E2AE2A218AB40040BB2A /* welcomeTokenScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = welcomeTokenScreen.css; sourceTree = "<group>"; };
@@ -353,6 +362,7 @@
 		CE4D13E82A20290500FE795C /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				CEAEEB352A25881600BD4C33 /* statisticsScreen.css */,
 				CE4D13E22A20067500FE795C /* mainScreen.css */,
 				CE4D13ED2A20294200FE795C /* moreScreen.css */,
 				CED4E2AE2A218AB40040BB2A /* welcomeTokenScreen.css */,
@@ -374,10 +384,12 @@
 		CED4E2AA2A2064140040BB2A /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				CEAEEB322A2587DF00BD4C33 /* statisticsScreen.js */,
 				CED4E2A72A2063F60040BB2A /* mainScreen.js */,
 				CED4E2AB2A2064260040BB2A /* moreScreen.js */,
 				CED4E2B12A218AD30040BB2A /* welcomeTokenScreen.js */,
 				CEA3CC0E2A23B92D00F77AD6 /* fetch.js */,
+				CEAEEB2F2A2577AB00BD4C33 /* report.js */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -535,6 +547,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED4E2AF2A218AB40040BB2A /* welcomeTokenScreen.css in Resources */,
+				CEAEEB332A2587DF00BD4C33 /* statisticsScreen.js in Resources */,
+				CEAEEB302A2577AB00BD4C33 /* report.js in Resources */,
 				CE4D13AD2A1FD82900FE795C /* background.js in Resources */,
 				CED4E2B52A218D790040BB2A /* global.css in Resources */,
 				CE4D13CA2A20028900FE795C /* reset.css in Resources */,
@@ -558,6 +572,7 @@
 				CED4E2B82A2194430040BB2A /* constants.js in Resources */,
 				CE4D13CD2A20031C00FE795C /* solid.css in Resources */,
 				CE4D13DE2A20063300FE795C /* fa-regular-400.woff2 in Resources */,
+				CEAEEB362A25881600BD4C33 /* statisticsScreen.css in Resources */,
 				CE4D13DC2A20063300FE795C /* fa-solid-900.ttf in Resources */,
 				CE4D13E62A2021AC00FE795C /* theme.css in Resources */,
 			);
@@ -568,6 +583,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED4E2B02A218AB40040BB2A /* welcomeTokenScreen.css in Resources */,
+				CEAEEB342A2587DF00BD4C33 /* statisticsScreen.js in Resources */,
+				CEAEEB312A2577AB00BD4C33 /* report.js in Resources */,
 				CE4D13AE2A1FD82900FE795C /* background.js in Resources */,
 				CED4E2B62A218D790040BB2A /* global.css in Resources */,
 				CE4D13CB2A20028900FE795C /* reset.css in Resources */,
@@ -591,6 +608,7 @@
 				CED4E2B92A2194430040BB2A /* constants.js in Resources */,
 				CE4D13CE2A20031C00FE795C /* solid.css in Resources */,
 				CE4D13DF2A20063300FE795C /* fa-regular-400.woff2 in Resources */,
+				CEAEEB372A25881600BD4C33 /* statisticsScreen.css in Resources */,
 				CE4D13DD2A20063300FE795C /* fa-solid-900.ttf in Resources */,
 				CE4D13E72A2021AC00FE795C /* theme.css in Resources */,
 			);

@@ -8,7 +8,6 @@
         queryById("accountTokenSuccess").style.display = "none";
     }
     
-    
     // MARK: - Actions
     
     // Click on row with select
@@ -61,25 +60,6 @@
         })
     }
     
-    // Feature Link Hover Checkox Click
-     
-    const featureLinkHoverCheckbox = queryById("redFish_FeatureLinkHover");
-    
-    featureLinkHoverCheckbox.onclick = function () {
-        event.preventDefault();
-        
-        browser.storage.local.get(StorageKey.FeatureLinkHover, function (obj) {
-            
-            const defaultValue = false;
-            const status = obj[StorageKey.FeatureLinkHover] == null ? defaultValue : obj[StorageKey.FeatureLinkHover];
-            
-            featureLinkHoverCheckbox.checked = status ? false : true;
-            
-            setToStorage(StorageKey.FeatureLinkHover,
-                         featureLinkHoverCheckbox.checked);
-        })
-    }
-    
     // Feature Website Visit Check Checkox Click
      
     const featureWebsiteVisitCheckCheckbox = queryById("redFish_FeatureWebsiteVisitCheck");
@@ -89,7 +69,7 @@
         
         browser.storage.local.get(StorageKey.FeatureWebsiteVisitCheck, function (obj) {
             
-            const defaultValue = false;
+            const defaultValue = true;
             const status = obj[StorageKey.FeatureWebsiteVisitCheck] == null ? defaultValue : obj[StorageKey.FeatureWebsiteVisitCheck];
             
             featureWebsiteVisitCheckCheckbox.checked = status ? false : true;
@@ -108,7 +88,7 @@
         
         browser.storage.local.get(StorageKey.FeatureExtensionWebsiteCheck, function (obj) {
             
-            const defaultValue = false;
+            const defaultValue = true;
             const status = obj[StorageKey.FeatureExtensionWebsiteCheck] == null ? defaultValue : obj[StorageKey.FeatureExtensionWebsiteCheck];
             
             featureExtensionWebsiteCheckCheckbox.checked = status ? false : true;
@@ -127,7 +107,7 @@
         
         browser.storage.local.get(StorageKey.FeatureCacheFetchedData, function (obj) {
             
-            const defaultValue = false;
+            const defaultValue = true;
             const status = obj[StorageKey.FeatureCacheFetchedData] == null ? defaultValue : obj[StorageKey.FeatureCacheFetchedData];
             
             featureCacheFetchedDataCheckbox.checked = status ? false : true;
@@ -141,7 +121,6 @@
     // Set features checkboxes states
     
     browser.storage.local.get([StorageKey.FeatureEmailChecker,
-                               StorageKey.FeatureLinkHover,
                                StorageKey.FeatureWebsiteVisitCheck,
                                StorageKey.FeatureExtensionWebsiteCheck,
                                StorageKey.FeatureCacheFetchedData], function (obj) {
@@ -155,18 +134,9 @@
             queryById("redFish_FeatureEmailChecker").checked = true;
         }
         
-        // Feature Link Hover
-        
-        const FeatureLinkHoverDefault = false;
-        const statusFeatureLinkHover = obj[StorageKey.FeatureLinkHover] == null ? FeatureLinkHoverDefault : obj[StorageKey.FeatureLinkHover];
-        
-        if (statusFeatureLinkHover == true) {
-            queryById("redFish_FeatureLinkHover").checked = true;
-        }
-        
         // Feature Website Visit Check
         
-        const FeatureWebsiteVisitCheckDefault = false;
+        const FeatureWebsiteVisitCheckDefault = true;
         const statusFeatureWebsiteVisitCheck = obj[StorageKey.FeatureWebsiteVisitCheck] == null ? FeatureWebsiteVisitCheckDefault : obj[StorageKey.FeatureWebsiteVisitCheck];
         
         if (statusFeatureWebsiteVisitCheck == true) {
@@ -175,7 +145,7 @@
         
         // Feature Extension Website Check
         
-        const FeatureExtensionWebsiteCheckDefault = false;
+        const FeatureExtensionWebsiteCheckDefault = true;
         const statusFeatureExtensionWebsiteCheck = obj[StorageKey.FeatureExtensionWebsiteCheck] == null ? FeatureExtensionWebsiteCheckDefault : obj[StorageKey.FeatureExtensionWebsiteCheck];
         
         if (statusFeatureExtensionWebsiteCheck == true) {
@@ -184,7 +154,7 @@
         
         // Feature Cache Fetched Data
         
-        const FeatureCacheFetchedDataDefault = false;
+        const FeatureCacheFetchedDataDefault = true;
         const statusFeatureCacheFetchedData = obj[StorageKey.FeatureCacheFetchedData] == null ? FeatureCacheFetchedDataDefault : obj[StorageKey.FeatureCacheFetchedData];
         
         if (statusFeatureCacheFetchedData == true) {

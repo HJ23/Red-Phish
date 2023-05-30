@@ -1,0 +1,90 @@
+#statisticsScreen .popUpHeader {
+    display: flex;
+    position: fixed;
+    background: var(--color-4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    opacity: 0.9;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#statisticsScreen .popupHeaderLeft {
+    width: 30%;
+    text-align: left;
+}
+
+#statisticsScreen .popupHeaderCenter {
+    width: 40%;
+    color: var(--color-1);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#statisticsScreen .popupHeaderRight {
+    width: 30%;
+}
+
+#statisticsScreen #fromStatisticsToMain {
+    cursor: pointer;
+    padding: 1px 1.5px;
+}
+
+#statisticsScreen #fromStatisticsToMain {
+    font-size: 23px;
+    color: var(--color-1);
+    transition: 0.15s;
+}
+
+#statisticsScreen #fromStatisticsToMain:hover {
+    color: var(--color-1-hover);
+}
+
+#statisticsScreen .popUpBody {
+    padding-top: 40px;
+    text-align: left;
+}
+
+#statisticsScreen .fishIcon {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+#statisticsScreen .fishIcon[data-color="green"] {
+    color: var(--color-8);
+}
+
+#statisticsScreen .fishIcon[data-color="yellow"] {
+    color: #dfd25a;
+}
+
+#statisticsScreen .fishIcon[data-color="red"] {
+    color: var(--color-9);
+}
+
+#statisticsScreen .statistickBlocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+#statisticsScreen .statBlock {
+    background: var(--color-5);
+    padding: 10px 15px 15px 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(33% - 5px);
+    box-sizing: border-box;
+}
+
+#statisticsScreen .statBlock .statBlockHeadline {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-1);
+    margin-bottom: 5px;
+}
+
+#statisticsScreen .statBlock .statBlockSubheadline {
+    font-size: 20px;
+}

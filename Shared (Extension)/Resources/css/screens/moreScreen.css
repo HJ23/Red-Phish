@@ -8,6 +8,23 @@
     padding: 15px 15px 10px 15px;
     opacity: 0.9;
     box-sizing: border-box;
+    align-items: center;
+}
+
+#moreScreen .popupHeaderLeft {
+    width: 30%;
+    text-align: left;
+}
+
+#moreScreen .popupHeaderCenter {
+    width: 40%;
+    color: var(--color-1);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#moreScreen .popupHeaderRight {
+    width: 30%;
 }
 
 #moreScreen #fromMoreToMain {
@@ -15,13 +32,13 @@
     padding: 1px 1.5px;
 }
 
-#moreScreen #fromMoreToMain i {
+#moreScreen #fromMoreToMain {
     font-size: 23px;
     color: var(--color-1);
     transition: 0.15s;
 }
 
-#moreScreen #fromMoreToMain:hover i {
+#moreScreen #fromMoreToMain:hover {
     color: var(--color-1-hover);
 }
 
