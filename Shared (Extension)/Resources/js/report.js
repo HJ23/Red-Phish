@@ -1,6 +1,6 @@
 function sendReport(site) {
     const url = 'https://report.netcraft.com/api/v3/report/urls';
-    const email = 'swifterapps@gmail.com';
+    const email = 'redphish.report@gmail.com';
     const requestData = {
       email: email,
       urls: [ { url: site } ]

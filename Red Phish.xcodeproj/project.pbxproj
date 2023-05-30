@@ -338,6 +338,8 @@
 			children = (
 				CED4E2AA2A2064140040BB2A /* screens */,
 				CE4D13622A1FD82900FE795C /* content.js */,
+				CEA3CC0E2A23B92D00F77AD6 /* fetch.js */,
+				CEAEEB2F2A2577AB00BD4C33 /* report.js */,
 				CE4D13612A1FD82900FE795C /* background.js */,
 				CE4D13F02A202C7000FE795C /* helpers.js */,
 				CED4E2B72A2194430040BB2A /* constants.js */,
@@ -388,8 +390,6 @@
 				CED4E2A72A2063F60040BB2A /* mainScreen.js */,
 				CED4E2AB2A2064260040BB2A /* moreScreen.js */,
 				CED4E2B12A218AD30040BB2A /* welcomeTokenScreen.js */,
-				CEA3CC0E2A23B92D00F77AD6 /* fetch.js */,
-				CEAEEB2F2A2577AB00BD4C33 /* report.js */,
 			);
 			path = screens;
 			sourceTree = "<group>";
