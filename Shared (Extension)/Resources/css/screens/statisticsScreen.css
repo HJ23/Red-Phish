@@ -20,7 +20,7 @@
     width: 40%;
     color: var(--color-1);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 #statisticsScreen .popupHeaderRight {
@@ -78,6 +78,17 @@
     box-sizing: border-box;
 }
 
+#statisticsScreen .statBlock .statBlockIcon {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#statisticsScreen .statBlock .statBlockIcon img {
+    width: 100%;
+}
+
 #statisticsScreen .statBlock .statBlockHeadline {
     font-weight: 300;
     font-size: 14px;
@@ -86,5 +97,7 @@
 }
 
 #statisticsScreen .statBlock .statBlockSubheadline {
-    font-size: 20px;
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: 500;
 }

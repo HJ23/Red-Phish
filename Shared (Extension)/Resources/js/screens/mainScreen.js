@@ -1,4 +1,40 @@
- (function() {
+function launch() {
+    browser.storage.local.get(StorageKey.Token, function (obj) {
+        const data = obj[StorageKey.Token];
+        if (data != null) {
+            showScreen("mainScreen");
+            
+            // Set token on settings screen
+            
+            queryById("accountTokenField").value = data;
+            
+            // Try to fetch info about website
+            
+            getCurrentTab().then((tabs) => {
+                const tabUrl = tabs[0].url;
+                
+                browser.storage.local.get([StorageKey.FeatureExtensionWebsiteCheck, StorageKey.Power], function (obj) {
+                    
+                    const isActive = obj[StorageKey.Power] == null ? true : obj[StorageKey.Power];
+                    const shouldCheck = obj[StorageKey.FeatureExtensionWebsiteCheck] == null ? true : obj[StorageKey.FeatureExtensionWebsiteCheck];
+                    
+                    if (shouldCheck && isActive) {
+                        if (tabUrl != "") {
+                           var url = new URL(tabUrl);
+                           var domain = url.hostname;
+                           
+                           fetchInfo(domain, API.Domain);
+                        } else {
+                           queryById("unableToCheckMessage").style.display = "block";
+                        }
+                    }
+                })
+            })
+        }
+    })
+}
+
+(function() {
      
     // MARK: - Functions
     
@@ -50,44 +86,6 @@
      };
      
      // MARK: - Prepare Screen
-     
-     // Check if token is setted
-     
-     function launch() {
-         browser.storage.local.get(StorageKey.Token, function (obj) {
-             const data = obj[StorageKey.Token];
-             if (data != null) {
-                 showScreen("mainScreen");
-                 
-                 // Set token on settings screen
-                 
-                 queryById("accountTokenField").value = data;
-                 
-                 // Try to fetch info about website
-                 
-                 getCurrentTab().then((tabs) => {
-                     const tabUrl = tabs[0].url;
-                     
-                     browser.storage.local.get([StorageKey.FeatureExtensionWebsiteCheck, StorageKey.Power], function (obj) {
-                         
-                         const isActive = obj[StorageKey.Power] == null ? true : obj[StorageKey.Power];
-                         const shouldCheck = obj[StorageKey.FeatureExtensionWebsiteCheck] == null ? true : obj[StorageKey.FeatureExtensionWebsiteCheck];
-                         
-                         if (shouldCheck && isActive) {
-                             if (tabUrl != "") {
-                                var url = new URL(tabUrl);
-                                var domain = url.hostname;
-                                
-                                fetchInfo(domain, API.Domain);
-                             } else {
-                                queryById("unableToCheckMessage").style.display = "block";
-                             }
-                         }
-                     })
-                 })
-             }
-         })
-     }
      
     launch();
     

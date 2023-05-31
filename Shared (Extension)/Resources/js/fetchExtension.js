@@ -17,16 +17,16 @@ function fetchInfo(requestSrting, type) {
         
         const reported = foundObject == null ? false : foundObject.reported;
         
-        if (retrieveFromCache && foundObject != null) {
-            startFetching(requestSrting, type);
-            displayVerdict(foundObject.verdict, foundObject.riskScore, type, reported);
-            
-            if (foundObject.reported) {
-                queryById("sendReportButton").setAttribute("data-reported", true);
-                queryById("sendReportButton").innerHTML = "Reported";
-            }
-        } else {
-            if (token != null) {
+        if (token != null) {
+            if (retrieveFromCache && foundObject != null) {
+                startFetching(requestSrting, type);
+                displayVerdict(foundObject.verdict, foundObject.riskScore, type, reported);
+                
+                if (foundObject.reported) {
+                    queryById("sendReportButton").setAttribute("data-reported", true);
+                    queryById("sendReportButton").innerHTML = "Reported";
+                }
+            } else {
                 startFetching(requestSrting, type);
                 
                 fetch(type.endpoint, {
@@ -39,49 +39,60 @@ function fetchInfo(requestSrting, type) {
                 })
                 .then((response) => {
                     response.json().then((json) => {
-                        const verdict = getVerdictResults(json, type).verdict;
-                        const riskScore = getVerdictResults(json, type).riskScore;
-                        
-                        displayVerdict(verdict, riskScore, type, reported);
-                        
-                        // Set reported button state
-                        if (foundObject != null && foundObject.reported == true) {
-                            queryById("sendReportButton").setAttribute("data-reported", true);
-                            queryById("sendReportButton").innerHTML = "Reported";
-                        }
-                        
-                        // Check if storage already containts same request
-                        const containsObjectWithParameter = storageData.some(obj => obj.request === requestSrting);
-                        
-                        if (containsObjectWithParameter == false) {
-                            const newDataToStore = {
-                                "request": requestSrting,
-                                "type": type,
-                                "verdict": verdict,
-                                "riskScore": riskScore,
-                                "reported": false
+                        if (json.result != null) {
+                            const verdict = getVerdictResults(json, type).verdict;
+                            const riskScore = getVerdictResults(json, type).riskScore;
+                            
+                            displayVerdict(verdict, riskScore, type, reported);
+                            
+                            // Set reported button state
+                            if (foundObject != null && foundObject.reported == true) {
+                                queryById("sendReportButton").setAttribute("data-reported", true);
+                                queryById("sendReportButton").innerHTML = "Reported";
                             }
                             
-                            storageData.push(newDataToStore);
+                            // Check if storage already containts same request
+                            const containsObjectWithParameter = storageData.some(obj => obj.request === requestSrting);
                             
-                            setToStorage(StorageKey.CacheStorage, storageData, function() {});
-                            
-                            // Update stats
-                            if (verdict == "benign") {
-                                statistic.benign += 1;
-                            } else if (verdict == "malicious") {
-                                statistic.malicious += 1;
-                            } else {
-                                statistic.unknown += 1;
+                            if (containsObjectWithParameter == false) {
+                                const newDataToStore = {
+                                    "request": requestSrting,
+                                    "type": type,
+                                    "verdict": verdict,
+                                    "riskScore": riskScore,
+                                    "reported": false,
+                                    "closed": false
+                                }
+                                
+                                storageData.push(newDataToStore);
+                                
+                                setToStorage(StorageKey.CacheStorage, storageData, function() {});
+                                
+                                // Update stats
+                                if (verdict == "benign") {
+                                    statistic.benign += 1;
+                                } else if (verdict == "malicious") {
+                                    statistic.malicious += 1;
+                                } else {
+                                    statistic.unknown += 1;
+                                }
+                                
+                                setToStorage(StorageKey.Statistics, statistic, function() {});
                             }
-                            
-                            setToStorage(StorageKey.Statistics, statistic, function() {});
+                        } else {
+                            displaySomethingWentWrong();
                         }
                     })
                 })
             }
         }
     })
+}
+
+function displaySomethingWentWrong() {
+    queryById("reportLoader").style.display = "none";
+    queryById("somethingWentWrong").style.display = "block";
+    queryById("reportInfoWrapper").style.display = "none";
 }
 
 function getBodyForFetch(requestSrting, type) {
@@ -115,6 +126,7 @@ function startFetching(requestSrting, type) {
     queryById("reportInfoWrapper").style.display = "block";
     queryById("reportLoader").style.display = "inline-block";
     queryById("reportResult").style.display = "none";
+    queryById("somethingWentWrong").style.display = "none";
     queryById("fastCheckField").value = "";
 }
 

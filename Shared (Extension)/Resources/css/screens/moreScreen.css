@@ -20,7 +20,7 @@
     width: 40%;
     color: var(--color-1);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 #moreScreen .popupHeaderRight {
@@ -58,7 +58,7 @@
 
 #moreScreen .popUpMenuList .leadingPart {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
 }
 
 #moreScreen .popUpMenuList .trailingPart {
@@ -74,15 +74,20 @@
 }
 
 #moreScreen .popUpMenuList .iconWrapper {
-    width: 20px;
-    text-align: center;
+    text-align: left;
     margin-right: 10px;
+    width: 20px;
+}
+
+#moreScreen .popUpMenuList .featureInfoWrapper {
+    flex-basis: fit-content;
 }
 
 #moreScreen .popUpMenuList .leadingPart .headline {
     font-size: 14px;
     text-align: left;
     display: block;
+    margin-bottom: 4px;
 }
 
 #moreScreen .popUpMenuList .leadingPart .subheadline {
@@ -186,10 +191,12 @@
     background-color: var(--color-7);
     border: none;
     font-size: 14px;
-    padding: 10px;
+    padding: 10px 0;
     margin-left: 10px;
+    box-sizing: border-box;
     border-radius: 7px;
     transition: 0.15s;
+    width: 100px;
 }
 
 #moreScreen .accountToken #submitAccountTokenUpdate:hover {

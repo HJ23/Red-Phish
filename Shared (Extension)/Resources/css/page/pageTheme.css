@@ -1,0 +1,25 @@
+html {
+    --color-1: #6F6F79;
+    --color-1-hover: #5B5B64;
+
+    --color-2: #878790;
+    --color-3: #000;
+    --color-4: #F6F6F6;
+    --color-5: #DFDFE4;
+    --color-6: #0F0F0F;
+
+    --color-7: #1E64CF;
+    --color-7-hover: #0F51B7;
+
+    --color-8: #43BF35;
+    --color-8-hover: #2CA91E;
+
+    --color-9: #DE4639;
+    --color-9-hover: #DA291A;
+
+    --color-10: #a2a5ad;
+
+    --color-11: #b6b6bb;
+    --color-11-hover: #7A7A87;
+
+}

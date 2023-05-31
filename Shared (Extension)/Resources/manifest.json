@@ -19,7 +19,8 @@
     },
     
     "content_scripts": [{
-        "js": [ "content.js" ],
+        "js": [ "constants.js", "report.js", "helpers.js", "fetchPage.js", "content.js" ],
+        "css": [ "pageTheme.css", "content.css" ],
         "matches": [ "<all_urls>" ]
     }],
     

@@ -37,10 +37,11 @@
     background-color: #1E64CF;
     border: none;
     font-size: 14px;
-    padding: 10px;
+    padding: 10px 0;
     margin-left: 10px;
     border-radius: 7px;
     transition: 0.15s;
+    width: 100px;
 }
 
 .welcomeTokenFieldWrapper #submitWelcomeToken:hover {
@@ -55,4 +56,43 @@
     color: var(--color-2);
     line-height: 20px;
     margin-top: 15px;
+}
+
+#welcomeTokenScreen .information a {
+    color: #1E64CF;
+}
+
+#welcomeTokenScreen .popUpMenuListGroupHeader {
+    font-size: 12px;
+    color: var(--color-1);
+    margin-bottom: 5px;
+    padding-left: 15px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#welcomeTokenScreen .headerLogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#welcomeTokenScreen .headerLogos .plus {
+    font-size: 27px;
+    line-height: 40px;
+    margin: 0 10px;
+    font-weight: 200;
+}
+
+#welcomeTokenScreen .fishIcon {
+    width: 50px;
+    position: relative;
+    top: 2px;
+}
+
+#welcomeTokenScreen .pangeaLogo {
+    width: 90px;
+    position: relative;
+    top: 3px;
 }

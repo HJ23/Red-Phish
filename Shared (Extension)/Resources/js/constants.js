@@ -9,9 +9,9 @@ const API = {
 };
 
 const StorageKey = {
-    Token: "redFish_accountToken3",
+    Token: "redFish_accountToken723747",
     Power: "redFish_power23",
-    CacheStorage: "redFish_cacheStorage25562",
+    CacheStorage: "redFish_cacheStorage1226",
     Statistics: "redFish_statistics",
     FeatureEmailChecker: "redFish_FeatureEmailChecker233",
     FeatureWebsiteVisitCheck: "redFish_FeatureWebsiteVisitCheck233",

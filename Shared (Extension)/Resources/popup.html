@@ -65,14 +65,13 @@
                 
                 <div class="result" id="reportResult">
                     <div class="icon">
-                        <i class="fa-solid fa-fish-fins fa-rotate-180" id="fishIcon" data-color="green"></i>
+                        <div id="fishIcon" data-color="green"></div>
                     </div>
                     <div class="info">
-                        <p class="riskScoreWrapper">Risk Score: <span id="riskScore"></span></p>
-                        <p class="verdictWrapper">Verdict: <span id="verdict"></span></p>
+                        <p class="riskScoreWrapper"><span class="infoTitle">Risk Score:</span> <span id="riskScore" class="infoValue"></span></p>
+                        <p class="verdictWrapper"><span class="infoTitle">Verdict:</span> <span id="verdict" class="infoValue"></span></p>
                     </div>
                     <div id="sendReportButton" data-reported="false">
-                        <i class="fa-solid fa-circle-check"></i>
                         <span id="sendReportButtonTitle">Report</span>
                     </div>
                 </div>
@@ -82,6 +81,12 @@
                 <i class="fa-solid fa-file-excel infoMessageIcon"></i>
                 <p class="infoMessageHeadline">Unable to Check</p>
                 <p class="infoMessageSubheadline">This tab is not recognized as a website</p>
+            </div>
+            
+            <div id="somethingWentWrong" class="infoMessage">
+                <i class="fa-solid fa-circle-exclamation infoMessageIcon"></i>
+                <p class="infoMessageHeadline">Something Went Wrong</p>
+                <p class="infoMessageSubheadline">Please try again later, verify your token settings and account balance</p>
             </div>
         </div>
         
@@ -107,17 +112,23 @@
         <div class="popUpBody">
             <div class="statistickBlocks">
                 <div class="statBlock">
-                    <i class="fa-solid fa-fish-fins fa-rotate-180 fishIcon" data-color="green"></i>
+                    <div class="statBlockIcon">
+                        <img src="fish-good.png">
+                    </div>
                     <p class="statBlockHeadline">Benign</p>
                     <p class="statBlockSubheadline" id="statBenign">0</p>
                 </div>
                 <div class="statBlock">
-                    <i class="fa-solid fa-fish-fins fa-rotate-180 fishIcon" data-color="yellow"></i>
+                    <div class="statBlockIcon">
+                        <img src="fish-unknown.png">
+                    </div>
                     <p class="statBlockHeadline">Unknown</p>
                     <p class="statBlockSubheadline" id="statUnknown">0</p>
                 </div>
                 <div class="statBlock">
-                    <i class="fa-solid fa-fish-fins fa-rotate-180 fishIcon" data-color="red"></i>
+                    <div class="statBlockIcon">
+                        <img src="fish-bad.png">
+                    </div>
                     <p class="statBlockHeadline">Malicious</p>
                     <p class="statBlockSubheadline" id="statMalicious">0</p>
                 </div>
@@ -155,14 +166,14 @@
             
             <div class="popUpListGroupBody">
                 
-                <div class="popUpMenuList" id="fromMoreToPasswordLocking">
+                <div class="popUpMenuList">
                     <div class="leadingPart">
                         <div class="iconWrapper">
                             <i class="fa-solid fa-envelope-circle-check"></i>
                         </div>
-                        <div>
+                        <div class="featureInfoWrapper">
                             <span class="headline">Emails Content Checker</span>
-                            <span class="subheadline">Script will check and do soething</span>
+                            <span class="subheadline">Detects fraud links in inbox emails</span>
                         </div>
                     </div>
                     <div class="trailingPart">
@@ -173,14 +184,14 @@
                     </div>
                 </div>
                 
-                <div class="popUpMenuList" id="fromMoreToYoutubeBlockingSchedule">
+                <div class="popUpMenuList">
                     <div class="leadingPart">
                         <div class="iconWrapper">
                             <i class="fa-solid fa-globe"></i>
                         </div>
-                        <div>
+                        <div class="featureInfoWrapper">
                             <span class="headline">Check When Visiting Website</span>
-                            <span class="subheadline">Script will check and do soething</span>
+                            <span class="subheadline">Checks the website upon visiting it</span>
                         </div>
                     </div>
                     <div class="trailingPart">
@@ -191,14 +202,14 @@
                     </div>
                 </div>
                 
-                <div class="popUpMenuList" id="fromMoreToYoutubeBlockingSchedule">
+                <div class="popUpMenuList">
                     <div class="leadingPart">
                         <div class="iconWrapper">
                             <i class="fa-solid fa-note-sticky"></i>
                         </div>
-                        <div>
-                            <span class="headline">Check When Open an Extension</span>
-                            <span class="subheadline">Script will check and do soething</span>
+                        <div class="featureInfoWrapper">
+                            <span class="headline">Check When Open Extension</span>
+                            <span class="subheadline">Checks the website upon opening the extension</span>
                         </div>
                     </div>
                     <div class="trailingPart">
@@ -209,14 +220,14 @@
                     </div>
                 </div>
                 
-                <div class="popUpMenuList" id="fromMoreToYoutubeBlockingSchedule">
+                <div class="popUpMenuList" >
                     <div class="leadingPart">
                         <div class="iconWrapper">
                             <i class="fa-solid fa-database"></i>
                         </div>
-                        <div>
+                        <div class="featureInfoWrapper">
                             <span class="headline">Retrieve Cached Data</span>
-                            <span class="subheadline">Script will check and do soething</span>
+                            <span class="subheadline">Shows information from previous checks, avoiding repeated requests</span>
                         </div>
                     </div>
                     <div class="trailingPart">
@@ -235,7 +246,7 @@
                         <div class="iconWrapper">
                             <i class="fa-solid fa-lightbulb"></i>
                         </div>
-                        <div>
+                        <div class="featureInfoWrapper">
                             <span class="headline">Suggest Improvements</span>
                         </div>
                     </div>
@@ -249,7 +260,7 @@
                         <div class="iconWrapper">
                             <i class="fa-solid fa-bug"></i>
                         </div>
-                        <div>
+                        <div class="featureInfoWrapper">
                             <span class="headline">Report a Bug</span>
                         </div>
                     </div>
@@ -265,12 +276,26 @@
     
     <!-------------------------------- Welcome Token Screen -------------------------------->
     <div class="appScreen" id="welcomeTokenScreen">
+        
+        <div class="headerLogos">
+            <img src="white-fish.png" class="fishIcon">
+            <span class="plus">+</span>
+            <img src="pangea.png" class="pangeaLogo">
+        </div>
+        
+        <div class="popUpMenuListGroupHeader">Service Activation</div>
+        
         <div class="welcomeTokenFieldWrapper">
             <input type="text" placeholder="Token" id="welcomeTokenField">
-            <button type="button" id="submitWelcomeToken">Set</button>
+            <button type="button" id="submitWelcomeToken">Setup</button>
         </div>
         <p class="subScreenError" id="welcomeTokenError">You have to specify token to continue.</p>
-        <p class="information">You have to enter token to continue You have to enter token to continue. You have to enter token to continue you have to enter token to continue you have to enter token to continue You have to enter token to continue. You have to enter token to continue you have to enter token to continue you have to enter token to continue.</p>
+        <p class="information">To utilize the extension, you must provide your <a href="https://pangea.cloud">pangea.cloud</a>  token.</p>
+        
+        <p class="information">For seamless functionality, ensure that the following services are active for your token: Domain Intel, URL Intel, IP Intel, and File Intel.</p>
+
+        <p class="information">If you are a new user, please follow the instructions below to obtain the token:<br>
+        <a href="https://pangea.cloud/docs/getting-started">https://pangea.cloud/docs/getting-started</a></p>
     </div>
     <!-------------------------------- Welcome Token Screen -------------------------------->
     
@@ -278,7 +303,7 @@
     <!-- Scripts -->
     <script src="constants.js"></script>
     <script src="helpers.js"></script>
-    <script src="fetch.js"></script>
+    <script src="fetchExtension.js"></script>
     <script src="report.js"></script>
     
     <script src="mainScreen.js"></script>

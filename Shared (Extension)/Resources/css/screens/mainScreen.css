@@ -25,7 +25,7 @@
     width: 40%;
     color: var(--color-1);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .topHeader .topHeaderButton {
@@ -112,10 +112,12 @@
     background-color: var(--color-7);
     border: none;
     font-size: 14px;
-    padding: 10px;
+    padding: 10px 0;
     margin-left: 10px;
     border-radius: 7px;
+    box-sizing: border-box;
     transition: 0.15s;
+    width: 100px;
 }
 
 .fastCheck #submitFastCheck:hover {
@@ -161,19 +163,23 @@
 }
 
 #reportInfoWrapper .icon #fishIcon {
-    font-size: 64px;
+    width: 80px;
+    height: 70px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #reportInfoWrapper .icon #fishIcon[data-color="green"] {
-    color: var(--color-8);
+    background-image: url(fish-good.png);
 }
 
 #reportInfoWrapper .icon #fishIcon[data-color="yellow"] {
-    color: #dfd25a;
+    background-image: url(fish-unknown.png);
 }
 
 #reportInfoWrapper .icon #fishIcon[data-color="red"] {
-    color: var(--color-9);
+    background-image: url(fish-bad.png);
 }
 
 #reportInfoWrapper .result .info {
@@ -181,8 +187,20 @@
     margin-left: 15px;
     font-size: 14px;
 }
+
 #reportInfoWrapper .result .info .riskScoreWrapper {
     margin-bottom: 7px;
+}
+
+#reportInfoWrapper .result .info .infoTitle {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-1);
+}
+
+#reportInfoWrapper .result .info .infoValue {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 #reportInfoWrapper #sendReportButton {
@@ -198,7 +216,7 @@
 }
 
 #reportInfoWrapper #sendReportButton:not([data-reported="true"]):hover {
-    border: 2px solid var(--color-9-hover);
+    border: 1.5px solid var(--color-9-hover);
     background: var(--color-9-hover);
     cursor: pointer;
     color: #fff;

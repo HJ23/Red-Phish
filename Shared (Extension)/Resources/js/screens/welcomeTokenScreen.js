@@ -13,6 +13,7 @@
             setToStorage(StorageKey.Token, tokenValue, function() {
                 showScreen("mainScreen");
                 queryById("welcomeTokenField").value = "";
+                launch();
             });
         }
     }

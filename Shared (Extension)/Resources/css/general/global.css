@@ -52,6 +52,8 @@
     font-size: 14px;
     color: var(--color-2);
     line-height: 22px;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 /* Info Message */

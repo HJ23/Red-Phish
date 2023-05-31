@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3D6AD62A267A1A00B50B92 /* fish-good.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AD52A267A1A00B50B92 /* fish-good.png */; };
+		CE3D6AD72A267A1A00B50B92 /* fish-good.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AD52A267A1A00B50B92 /* fish-good.png */; };
+		CE3D6AD92A267DB800B50B92 /* fish-unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AD82A267DB700B50B92 /* fish-unknown.png */; };
+		CE3D6ADA2A267DB800B50B92 /* fish-unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AD82A267DB700B50B92 /* fish-unknown.png */; };
+		CE3D6ADF2A268C0200B50B92 /* fetchPage.js in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6ADE2A268C0200B50B92 /* fetchPage.js */; };
+		CE3D6AE02A268C0200B50B92 /* fetchPage.js in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6ADE2A268C0200B50B92 /* fetchPage.js */; };
+		CE3D6AE42A26A48600B50B92 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AE32A26A48600B50B92 /* content.css */; };
+		CE3D6AE52A26A48600B50B92 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AE32A26A48600B50B92 /* content.css */; };
+		CE3D6AE72A26A8BF00B50B92 /* pageTheme.css in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AE62A26A8BF00B50B92 /* pageTheme.css */; };
+		CE3D6AE82A26A8BF00B50B92 /* pageTheme.css in Resources */ = {isa = PBXBuildFile; fileRef = CE3D6AE62A26A8BF00B50B92 /* pageTheme.css */; };
 		CE4D136E2A1FD82900FE795C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D136D2A1FD82900FE795C /* AppDelegate.swift */; };
 		CE4D13702A1FD82900FE795C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D136F2A1FD82900FE795C /* SceneDelegate.swift */; };
 		CE4D13732A1FD82900FE795C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13712A1FD82900FE795C /* LaunchScreen.storyboard */; };
@@ -67,14 +77,18 @@
 		CE4D13EF2A20294200FE795C /* moreScreen.css in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13ED2A20294200FE795C /* moreScreen.css */; };
 		CE4D13F12A202C7000FE795C /* helpers.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13F02A202C7000FE795C /* helpers.js */; };
 		CE4D13F22A202C7000FE795C /* helpers.js in Resources */ = {isa = PBXBuildFile; fileRef = CE4D13F02A202C7000FE795C /* helpers.js */; };
-		CEA3CC0F2A23B92D00F77AD6 /* fetch.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetch.js */; };
-		CEA3CC102A23B92D00F77AD6 /* fetch.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetch.js */; };
+		CEA3CC0F2A23B92D00F77AD6 /* fetchExtension.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetchExtension.js */; };
+		CEA3CC102A23B92D00F77AD6 /* fetchExtension.js in Resources */ = {isa = PBXBuildFile; fileRef = CEA3CC0E2A23B92D00F77AD6 /* fetchExtension.js */; };
 		CEAEEB302A2577AB00BD4C33 /* report.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB2F2A2577AB00BD4C33 /* report.js */; };
 		CEAEEB312A2577AB00BD4C33 /* report.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB2F2A2577AB00BD4C33 /* report.js */; };
 		CEAEEB332A2587DF00BD4C33 /* statisticsScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB322A2587DF00BD4C33 /* statisticsScreen.js */; };
 		CEAEEB342A2587DF00BD4C33 /* statisticsScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB322A2587DF00BD4C33 /* statisticsScreen.js */; };
 		CEAEEB362A25881600BD4C33 /* statisticsScreen.css in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB352A25881600BD4C33 /* statisticsScreen.css */; };
 		CEAEEB372A25881600BD4C33 /* statisticsScreen.css in Resources */ = {isa = PBXBuildFile; fileRef = CEAEEB352A25881600BD4C33 /* statisticsScreen.css */; };
+		CEC2B5532A27C101003068B2 /* pangea.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC2B5522A27C101003068B2 /* pangea.png */; };
+		CEC2B5542A27C101003068B2 /* pangea.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC2B5522A27C101003068B2 /* pangea.png */; };
+		CEC2B5562A27C252003068B2 /* white-fish.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC2B5552A27C252003068B2 /* white-fish.png */; };
+		CEC2B5572A27C252003068B2 /* white-fish.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC2B5552A27C252003068B2 /* white-fish.png */; };
 		CED4E2A82A2063F60040BB2A /* mainScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2A72A2063F60040BB2A /* mainScreen.js */; };
 		CED4E2A92A2063F60040BB2A /* mainScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2A72A2063F60040BB2A /* mainScreen.js */; };
 		CED4E2AC2A2064260040BB2A /* moreScreen.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2AB2A2064260040BB2A /* moreScreen.js */; };
@@ -87,6 +101,8 @@
 		CED4E2B62A218D790040BB2A /* global.css in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B42A218D790040BB2A /* global.css */; };
 		CED4E2B82A2194430040BB2A /* constants.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B72A2194430040BB2A /* constants.js */; };
 		CED4E2B92A2194430040BB2A /* constants.js in Resources */ = {isa = PBXBuildFile; fileRef = CED4E2B72A2194430040BB2A /* constants.js */; };
+		CEF600632A25F6FF002B5485 /* fish-bad.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF600622A25F6FF002B5485 /* fish-bad.png */; };
+		CEF600642A25F6FF002B5485 /* fish-bad.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF600622A25F6FF002B5485 /* fish-bad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +148,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE3D6AD52A267A1A00B50B92 /* fish-good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fish-good.png"; sourceTree = "<group>"; };
+		CE3D6AD82A267DB700B50B92 /* fish-unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fish-unknown.png"; sourceTree = "<group>"; };
+		CE3D6ADE2A268C0200B50B92 /* fetchPage.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fetchPage.js; sourceTree = "<group>"; };
+		CE3D6AE32A26A48600B50B92 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = content.css; sourceTree = "<group>"; };
+		CE3D6AE62A26A8BF00B50B92 /* pageTheme.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = pageTheme.css; sourceTree = "<group>"; };
 		CE4D13552A1FD82700FE795C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		CE4D13562A1FD82700FE795C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		CE4D13572A1FD82700FE795C /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -173,16 +194,19 @@
 		CE4D13E52A2021AC00FE795C /* theme.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = theme.css; sourceTree = "<group>"; };
 		CE4D13ED2A20294200FE795C /* moreScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = moreScreen.css; sourceTree = "<group>"; };
 		CE4D13F02A202C7000FE795C /* helpers.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = helpers.js; sourceTree = "<group>"; };
-		CEA3CC0E2A23B92D00F77AD6 /* fetch.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fetch.js; sourceTree = "<group>"; };
+		CEA3CC0E2A23B92D00F77AD6 /* fetchExtension.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = fetchExtension.js; sourceTree = "<group>"; };
 		CEAEEB2F2A2577AB00BD4C33 /* report.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = report.js; sourceTree = "<group>"; };
 		CEAEEB322A2587DF00BD4C33 /* statisticsScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = statisticsScreen.js; sourceTree = "<group>"; };
 		CEAEEB352A25881600BD4C33 /* statisticsScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = statisticsScreen.css; sourceTree = "<group>"; };
+		CEC2B5522A27C101003068B2 /* pangea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pangea.png; sourceTree = "<group>"; };
+		CEC2B5552A27C252003068B2 /* white-fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-fish.png"; sourceTree = "<group>"; };
 		CED4E2A72A2063F60040BB2A /* mainScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mainScreen.js; sourceTree = "<group>"; };
 		CED4E2AB2A2064260040BB2A /* moreScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = moreScreen.js; sourceTree = "<group>"; };
 		CED4E2AE2A218AB40040BB2A /* welcomeTokenScreen.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = welcomeTokenScreen.css; sourceTree = "<group>"; };
 		CED4E2B12A218AD30040BB2A /* welcomeTokenScreen.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = welcomeTokenScreen.js; sourceTree = "<group>"; };
 		CED4E2B42A218D790040BB2A /* global.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = global.css; sourceTree = "<group>"; };
 		CED4E2B72A2194430040BB2A /* constants.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = constants.js; sourceTree = "<group>"; };
+		CEF600622A25F6FF002B5485 /* fish-bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fish-bad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +241,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE3D6AE12A26A47100B50B92 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				CE3D6ADE2A268C0200B50B92 /* fetchPage.js */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
+		CE3D6AE22A26A47A00B50B92 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				CE3D6AE32A26A48600B50B92 /* content.css */,
+				CE3D6AE62A26A8BF00B50B92 /* pageTheme.css */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
 		CE4D134D2A1FD82600FE795C = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +304,7 @@
 		CE4D135D2A1FD82800FE795C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEF600652A25F766002B5485 /* img */,
 				CE4D13C82A20027000FE795C /* js */,
 				CE4D13C72A20026D00FE795C /* css */,
 				CE4D135E2A1FD82800FE795C /* _locales */,
@@ -326,6 +368,7 @@
 		CE4D13C72A20026D00FE795C /* css */ = {
 			isa = PBXGroup;
 			children = (
+				CE3D6AE22A26A47A00B50B92 /* page */,
 				CE4D13CF2A20033100FE795C /* fa */,
 				CE4D13E92A20290F00FE795C /* general */,
 				CE4D13E82A20290500FE795C /* screens */,
@@ -336,13 +379,14 @@
 		CE4D13C82A20027000FE795C /* js */ = {
 			isa = PBXGroup;
 			children = (
+				CE3D6AE12A26A47100B50B92 /* page */,
 				CED4E2AA2A2064140040BB2A /* screens */,
 				CE4D13622A1FD82900FE795C /* content.js */,
-				CEA3CC0E2A23B92D00F77AD6 /* fetch.js */,
 				CEAEEB2F2A2577AB00BD4C33 /* report.js */,
 				CE4D13612A1FD82900FE795C /* background.js */,
 				CE4D13F02A202C7000FE795C /* helpers.js */,
 				CED4E2B72A2194430040BB2A /* constants.js */,
+				CEA3CC0E2A23B92D00F77AD6 /* fetchExtension.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -392,6 +436,18 @@
 				CED4E2B12A218AD30040BB2A /* welcomeTokenScreen.js */,
 			);
 			path = screens;
+			sourceTree = "<group>";
+		};
+		CEF600652A25F766002B5485 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				CEF600622A25F6FF002B5485 /* fish-bad.png */,
+				CE3D6AD82A267DB700B50B92 /* fish-unknown.png */,
+				CEC2B5552A27C252003068B2 /* white-fish.png */,
+				CEC2B5522A27C101003068B2 /* pangea.png */,
+				CE3D6AD52A267A1A00B50B92 /* fish-good.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED4E2AF2A218AB40040BB2A /* welcomeTokenScreen.css in Resources */,
+				CEF600632A25F6FF002B5485 /* fish-bad.png in Resources */,
 				CEAEEB332A2587DF00BD4C33 /* statisticsScreen.js in Resources */,
 				CEAEEB302A2577AB00BD4C33 /* report.js in Resources */,
 				CE4D13AD2A1FD82900FE795C /* background.js in Resources */,
@@ -554,18 +611,24 @@
 				CE4D13CA2A20028900FE795C /* reset.css in Resources */,
 				CE4D13EE2A20294200FE795C /* moreScreen.css in Resources */,
 				CE4D13DA2A20063300FE795C /* fa-solid-900.woff2 in Resources */,
+				CEC2B5532A27C101003068B2 /* pangea.png in Resources */,
 				CE4D13B32A1FD82900FE795C /* general.css in Resources */,
+				CE3D6AD92A267DB800B50B92 /* fish-unknown.png in Resources */,
 				CED4E2AC2A2064260040BB2A /* moreScreen.js in Resources */,
 				CE4D13D12A20034100FE795C /* regular.css in Resources */,
 				CE4D13E32A20067500FE795C /* mainScreen.css in Resources */,
 				CE4D13E02A20063300FE795C /* fa-regular-400.ttf in Resources */,
 				CE4D13B12A1FD82900FE795C /* popup.html in Resources */,
 				CE4D13A92A1FD82900FE795C /* images in Resources */,
-				CEA3CC0F2A23B92D00F77AD6 /* fetch.js in Resources */,
+				CEA3CC0F2A23B92D00F77AD6 /* fetchExtension.js in Resources */,
+				CE3D6AD62A267A1A00B50B92 /* fish-good.png in Resources */,
+				CE3D6AE72A26A8BF00B50B92 /* pageTheme.css in Resources */,
+				CE3D6AE42A26A48600B50B92 /* content.css in Resources */,
 				CE4D13D42A20036800FE795C /* fontawesome.css in Resources */,
 				CE4D13AB2A1FD82900FE795C /* manifest.json in Resources */,
 				CE4D13F12A202C7000FE795C /* helpers.js in Resources */,
 				CED4E2B22A218AD30040BB2A /* welcomeTokenScreen.js in Resources */,
+				CE3D6ADF2A268C0200B50B92 /* fetchPage.js in Resources */,
 				CED4E2A82A2063F60040BB2A /* mainScreen.js in Resources */,
 				CE4D13A72A1FD82900FE795C /* _locales in Resources */,
 				CE4D13AF2A1FD82900FE795C /* content.js in Resources */,
@@ -575,6 +638,7 @@
 				CEAEEB362A25881600BD4C33 /* statisticsScreen.css in Resources */,
 				CE4D13DC2A20063300FE795C /* fa-solid-900.ttf in Resources */,
 				CE4D13E62A2021AC00FE795C /* theme.css in Resources */,
+				CEC2B5562A27C252003068B2 /* white-fish.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED4E2B02A218AB40040BB2A /* welcomeTokenScreen.css in Resources */,
+				CEF600642A25F6FF002B5485 /* fish-bad.png in Resources */,
 				CEAEEB342A2587DF00BD4C33 /* statisticsScreen.js in Resources */,
 				CEAEEB312A2577AB00BD4C33 /* report.js in Resources */,
 				CE4D13AE2A1FD82900FE795C /* background.js in Resources */,
@@ -590,18 +655,24 @@
 				CE4D13CB2A20028900FE795C /* reset.css in Resources */,
 				CE4D13EF2A20294200FE795C /* moreScreen.css in Resources */,
 				CE4D13DB2A20063300FE795C /* fa-solid-900.woff2 in Resources */,
+				CEC2B5542A27C101003068B2 /* pangea.png in Resources */,
 				CE4D13B42A1FD82900FE795C /* general.css in Resources */,
+				CE3D6ADA2A267DB800B50B92 /* fish-unknown.png in Resources */,
 				CED4E2AD2A2064260040BB2A /* moreScreen.js in Resources */,
 				CE4D13D22A20034100FE795C /* regular.css in Resources */,
 				CE4D13E42A20067500FE795C /* mainScreen.css in Resources */,
 				CE4D13E12A20063300FE795C /* fa-regular-400.ttf in Resources */,
 				CE4D13B22A1FD82900FE795C /* popup.html in Resources */,
 				CE4D13AA2A1FD82900FE795C /* images in Resources */,
-				CEA3CC102A23B92D00F77AD6 /* fetch.js in Resources */,
+				CEA3CC102A23B92D00F77AD6 /* fetchExtension.js in Resources */,
+				CE3D6AD72A267A1A00B50B92 /* fish-good.png in Resources */,
+				CE3D6AE82A26A8BF00B50B92 /* pageTheme.css in Resources */,
+				CE3D6AE52A26A48600B50B92 /* content.css in Resources */,
 				CE4D13D52A20036800FE795C /* fontawesome.css in Resources */,
 				CE4D13AC2A1FD82900FE795C /* manifest.json in Resources */,
 				CE4D13F22A202C7000FE795C /* helpers.js in Resources */,
 				CED4E2B32A218AD30040BB2A /* welcomeTokenScreen.js in Resources */,
+				CE3D6AE02A268C0200B50B92 /* fetchPage.js in Resources */,
 				CED4E2A92A2063F60040BB2A /* mainScreen.js in Resources */,
 				CE4D13A82A1FD82900FE795C /* _locales in Resources */,
 				CE4D13B02A1FD82900FE795C /* content.js in Resources */,
@@ -611,6 +682,7 @@
 				CEAEEB372A25881600BD4C33 /* statisticsScreen.css in Resources */,
 				CE4D13DD2A20063300FE795C /* fa-solid-900.ttf in Resources */,
 				CE4D13E72A2021AC00FE795C /* theme.css in Resources */,
+				CEC2B5572A27C252003068B2 /* white-fish.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
