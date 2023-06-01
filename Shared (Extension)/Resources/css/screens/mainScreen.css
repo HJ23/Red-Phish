@@ -118,6 +118,7 @@
     box-sizing: border-box;
     transition: 0.15s;
     width: 100px;
+    color: #fff;
 }
 
 .fastCheck #submitFastCheck:hover {

@@ -197,6 +197,7 @@
     border-radius: 7px;
     transition: 0.15s;
     width: 100px;
+    color: #fff;
 }
 
 #moreScreen .accountToken #submitAccountTokenUpdate:hover {

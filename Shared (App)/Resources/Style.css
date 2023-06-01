@@ -6,7 +6,7 @@
 
 :root {
     color-scheme: light dark;
-
+    --color-3: #FFFFFF;
     --spacing: 20px;
 }
 
@@ -19,43 +19,194 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    gap: var(--spacing);
-    margin: 0 calc(var(--spacing) * 2);
-    height: 100%;
-
     font: -apple-system-short-body;
     text-align: center;
 }
 
-body:not(.platform-mac, .platform-ios) :is(.platform-mac, .platform-ios) {
+/** CUSTOM **/
+
+.modalWrapper {
+    width: 100%;
+    max-width: 330px;
+}
+
+.controlTabs {
+    display: flex;
+    justify-content: center;
+}
+
+.controlTabs.margin_bottom_20 {
+    margin-bottom: 15px;
+}
+
+.controlTabs .control_tab {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.controlTabs .control_tab:hover {
+    background: var(--color-3);
+    color: #000;
+}
+
+.extensionName {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.manual_container {
+    color: var(--color-3);
     display: none;
 }
 
-body.platform-ios .platform-mac {
+.manualWrapper {
+    margin-top: 20px;
+    text-align: left;
     display: none;
 }
 
-body.platform-mac .platform-ios {
+.manualWrapper.usage {
     display: none;
 }
 
-body.platform-ios .platform-mac {
+.manualWrapper .step {
+     color: var(--color-3);
+}
+
+.manualWrapper .step .puzzleInfo {
+    display: flex;
+    align-items: center;
+}
+
+.manualWrapper .step {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.manualWrapper .step .point {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: var(--color-3);
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;line-height: 25px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.littleA {
+    font-size: 12px;
+}
+
+html[controlTabsPlatform="ios"][controlTabsIosPlatform="iphone"] .controlTabs.controlTabsPlatform .control_tab:nth-child(1),
+html[controlTabsPlatform="ios"][controlTabsIosPlatform="ipad"] .controlTabs.controlTabsPlatform .control_tab:nth-child(2),
+
+/* Purpose Tab Active State */
+html[controlTabsPurpose="activation"] .controlTabs.controlTabsPurpose .control_tab:nth-child(1),
+html[controlTabsPurpose="usage"] .controlTabs.controlTabsPurpose .control_tab:nth-child(2) {
+    background: var(--color-3);
+    color: #000;
+}
+
+.mmanualContainer {
     display: none;
 }
 
-body:not(.state-on, .state-off) :is(.state-on, .state-off) {
-    display: none;
+/* Ios Platform */
+html[controlTabsPlatform="ios"][controlTabsIosPlatform="iphone"] .mmanualContainer.iphone {
+    display: block;
 }
 
-body.state-on :is(.state-off, .state-unknown) {
-    display: none;
+html[controlTabsPlatform="ios"][controlTabsIosPlatform="ipad"] .mmanualContainer.ipad {
+    display: block;
 }
 
-body.state-off :is(.state-on, .state-unknown) {
-    display: none;
+/* Platform */
+html[controlTabsPlatform="mac"] .manual_container.mac {
+    display: block;
 }
 
-button {
-    font-size: 1em;
+html[controlTabsPlatform="ios"] .manual_container.ios {
+    display: block;
+}
+
+/* Purpose */
+html[controlTabsPurpose="activation"] .manualWrapper.activation {
+    display: block;
+}
+
+html[controlTabsPurpose="usage"] .manualWrapper.usage {
+    display: block;
+}
+
+.puzzleIcon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.puzzleIcon path {
+    fill: var(--color-3);
+}
+
+.logoWrapper {
+    text-align: center;
+}
+
+.logoIcon {
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+}
+
+html[controlTabsPlatform=mac] .logoIcon {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+
+/* Light Mode Styles*/
+
+@media (prefers-color-scheme: light) {
+    
+    .manualWrapper .step {
+        color: #000;
+    }
+    
+    .puzzleIcon path {
+        fill: #000;
+    }
+    
+    .manualWrapper .step .point {
+        background: #000;
+        color: var(--color-3);
+    }
+    
+    .controlTabs .control_tab:hover {
+        background: #000;
+        color: var(--color-3);
+    }
+    
+    html[controlTabsPlatform="ios"][controlTabsIosPlatform="iphone"] .controlTabs.controlTabsPlatform .control_tab:nth-child(1),
+    html[controlTabsPlatform="ios"][controlTabsIosPlatform="ipad"] .controlTabs.controlTabsPlatform .control_tab:nth-child(2),
+
+    /* Purpose Tab Active State */
+    html[controlTabsPurpose="activation"] .controlTabs.controlTabsPurpose .control_tab:nth-child(1),
+    html[controlTabsPurpose="usage"] .controlTabs.controlTabsPurpose .control_tab:nth-child(2) {
+        background: #000;
+        color: var(--color-3);
+    }
+    
+    .controlTabs .control_tab {
+        color: #000;
+    }
 }

@@ -1,24 +1,45 @@
-function show(platform, enabled, useSettingsInsteadOfPreferences) {
-    document.body.classList.add(`platform-${platform}`);
+function show(platform, enabled) {
+    document.querySelector("html").setAttribute("controlTabsPlatform", `${platform}`);
+}
 
-    if (useSettingsInsteadOfPreferences) {
-        document.getElementsByClassName('platform-mac state-on')[0].innerText = "Red Phish’s extension is currently on. You can turn it off in the Extensions section of Safari Settings.";
-        document.getElementsByClassName('platform-mac state-off')[0].innerText = "Red Phish’s extension is currently off. You can turn it on in the Extensions section of Safari Settings.";
-        document.getElementsByClassName('platform-mac state-unknown')[0].innerText = "You can turn on Red Phish’s extension in the Extensions section of Safari Settings.";
-        document.getElementsByClassName('platform-mac open-preferences')[0].innerText = "Quit and Open Safari Settings…";
-    }
+// MARK: - Custom
 
-    if (typeof enabled === "boolean") {
-        document.body.classList.toggle(`state-on`, enabled);
-        document.body.classList.toggle(`state-off`, !enabled);
-    } else {
-        document.body.classList.remove(`state-on`);
-        document.body.classList.remove(`state-off`);
+// Set Extension Name
+const extensionName = "RedPhish: Detect Cyber Threats";
+
+const nameAreas = document.querySelectorAll(".pastExtensionName");
+for (const name of nameAreas) {
+    name.innerHTML = extensionName;
+}
+
+// Activation Buttons
+const activationButtons = document.querySelectorAll(".controlTabsPurpose_activation");
+for (const button of activationButtons) {
+    button.onclick = function() {
+        document.querySelector("html").setAttribute("controlTabsPurpose", "activation");
     }
 }
 
-function openPreferences() {
-    webkit.messageHandlers.controller.postMessage("open-preferences");
+// Usage Buttons
+const usageButtons = document.querySelectorAll(".controlTabsPurpose_usage");
+for (const button of usageButtons) {
+    button.onclick = function() {
+        document.querySelector("html").setAttribute("controlTabsPurpose", "usage");
+    }
 }
 
-document.querySelector("button.open-preferences").addEventListener("click", openPreferences);
+// Iphone Tabs
+const iphoneButtons = document.querySelectorAll(".controlTabsPlatform_iphone");
+for (const button of iphoneButtons) {
+    button.onclick = function() {
+        document.querySelector("html").setAttribute("controlTabsIosPlatform", "iphone");
+    }
+}
+
+// Ipad Tabs
+const ipadButtons = document.querySelectorAll(".controlTabsPlatform_ipad");
+for (const button of ipadButtons) {
+    button.onclick = function() {
+        document.querySelector("html").setAttribute("controlTabsIosPlatform", "ipad");
+    }
+}

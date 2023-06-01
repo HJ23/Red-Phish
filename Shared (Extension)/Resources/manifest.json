@@ -19,8 +19,8 @@
     },
     
     "content_scripts": [{
-        "js": [ "constants.js", "report.js", "helpers.js", "fetchPage.js", "content.js" ],
-        "css": [ "pageTheme.css", "content.css" ],
+        "js": [ "constants.js", "report.js", "helpers.js", "fetchPage.js", "checkEmail.js", "content.js" ],
+        "css": [ "global.css", "pageTheme.css", "checkEmail.css", "checkPage.css" ],
         "matches": [ "<all_urls>" ]
     }],
     

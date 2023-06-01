@@ -1,10 +1,10 @@
 function fetchInfo(requestSrting, type) {
     
-    // here will check if need to retrieve from cache
     browser.storage.local.get([StorageKey.Token,
                                StorageKey.FeatureCacheFetchedData,
                                StorageKey.CacheStorage,
-                               StorageKey.Statistics], function (obj) {
+                               StorageKey.Statistics,
+                               StorageKey.Power], function (obj) {
         
         const token = obj[StorageKey.Token];
         const retrieveFromCache = obj[StorageKey.FeatureCacheFetchedData] == null ? true : obj[StorageKey.FeatureCacheFetchedData];
@@ -17,7 +17,9 @@ function fetchInfo(requestSrting, type) {
         
         const reported = foundObject == null ? false : foundObject.reported;
         
-        if (token != null) {
+        const isActive = obj[StorageKey.Power] == null ? true : obj[StorageKey.Power];
+        
+        if (token != null && isActive == true) {
             if (retrieveFromCache && foundObject != null) {
                 startFetching(requestSrting, type);
                 displayVerdict(foundObject.verdict, foundObject.riskScore, type, reported);

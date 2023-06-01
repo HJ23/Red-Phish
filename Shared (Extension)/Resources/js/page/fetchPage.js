@@ -7,7 +7,8 @@
          browser.storage.local.get([StorageKey.Token,
                                     StorageKey.FeatureCacheFetchedData,
                                     StorageKey.CacheStorage,
-                                    StorageKey.Statistics], function (obj) {
+                                    StorageKey.Statistics,
+                                    StorageKey.Power], function (obj) {
              
              const token = obj[StorageKey.Token];
              const retrieveFromCache = obj[StorageKey.FeatureCacheFetchedData] == null ? true : obj[StorageKey.FeatureCacheFetchedData];
@@ -20,7 +21,9 @@
              
              const reported = foundObject == null ? false : foundObject.reported;
              
-             if (token != null) {
+             const isActive = obj[StorageKey.Power] == null ? true : obj[StorageKey.Power];
+             
+             if (token != null && isActive == true) {
                  
                  if (foundObject == null || foundObject.closed != true) {
                      if (retrieveFromCache && foundObject != null) {
@@ -127,31 +130,6 @@
              queryById("fishIcon").setAttribute("data-color", "green");
          } else {
              queryById("fishIcon").setAttribute("data-color", "yellow");
-         }
-     }
-     
-     function getVerdictResults(json, type) {
-         if (type == API.Domain) {
-             return { "verdict": json.result.data.verdict, "riskScore": json.result.raw_data.response.risk_score }
-         } else if (type == API.URL) {
-             return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
-         } else if (type == API.IP) {
-             return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
-         } else if (type == API.Hash) {
-             return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
-         }
-     }
-     
-     function getBodyForFetch(requestSrting, type) {
-         if (type == API.Domain) {
-             return { "provider": "domaintools", "domain": requestSrting, "raw": true }
-         } else if (type == API.URL) {
-             return { "provider": "crowdstrike", "url": requestSrting }
-         } else if (type == API.IP) {
-             return {"provider": "crowdstrike", "ip": requestSrting}
-         } else if (type == API.Hash) {
-             var hashType = checkHashType(requestSrting);
-             return {"provider": "crowdstrike", "hash": requestSrting, "hash_type": hashType }
          }
      }
      

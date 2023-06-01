@@ -49,3 +49,33 @@ function checkHashType(hash) {
    }
 }
 
+function getVerdictResults(json, type) {
+    if (type == API.Domain) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.raw_data.response.risk_score }
+    } else if (type == API.URL) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
+    } else if (type == API.IP) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
+    } else if (type == API.Hash) {
+        return { "verdict": json.result.data.verdict, "riskScore": json.result.data.score }
+    }
+}
+
+function getBodyForFetch(requestSrting, type) {
+    if (type == API.Domain) {
+        return { "provider": "domaintools", "domain": requestSrting, "raw": true }
+    } else if (type == API.URL) {
+        return { "provider": "crowdstrike", "url": requestSrting }
+    } else if (type == API.IP) {
+        return {"provider": "crowdstrike", "ip": requestSrting}
+    } else if (type == API.Hash) {
+        var hashType = checkHashType(requestSrting);
+        return {"provider": "crowdstrike", "hash": requestSrting, "hash_type": hashType }
+    }
+}
+
+function isURL(url) {
+  var regex = /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,6}\.?)(\/[\w.-]*)*\/?$/;
+
+  return regex.test(url);
+}

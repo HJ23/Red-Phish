@@ -42,6 +42,7 @@
     border-radius: 7px;
     transition: 0.15s;
     width: 100px;
+    color: #fff;
 }
 
 .welcomeTokenFieldWrapper #submitWelcomeToken:hover {
@@ -72,7 +73,7 @@
 }
 
 #welcomeTokenScreen .headerLogos {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -95,4 +96,16 @@
     width: 90px;
     position: relative;
     top: 3px;
+}
+
+@media (prefers-color-scheme: light) {
+    #welcomeTokenScreen .headerLogos.light {
+        display: flex;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #welcomeTokenScreen .headerLogos.dark {
+        display: flex;
+    }
 }

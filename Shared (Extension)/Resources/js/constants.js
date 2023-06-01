@@ -1,6 +1,3 @@
-const token = "pts_l62yrakfu3c6ezf56fh6jivzv2vcwjrf";
-const badDomain = "737updatesboeing.com";
-
 const API = {
     Domain: { endpoint: "https://domain-intel.aws.us.pangea.cloud/v1/reputation", headline: "Domain Reputation: " },
     URL: { endpoint: "https://url-intel.aws.us.pangea.cloud/v1/reputation", headline: "URL Reputation: " },
@@ -9,7 +6,7 @@ const API = {
 };
 
 const StorageKey = {
-    Token: "redFish_accountToken723747",
+    Token: "redFish_accountToken7237477",
     Power: "redFish_power23",
     CacheStorage: "redFish_cacheStorage1226",
     Statistics: "redFish_statistics",
