@@ -6,12 +6,12 @@ const API = {
 };
 
 const StorageKey = {
-    Token: "redFish_accountToken7237477",
-    Power: "redFish_power23",
-    CacheStorage: "redFish_cacheStorage1226",
-    Statistics: "redFish_statistics",
-    FeatureEmailChecker: "redFish_FeatureEmailChecker233",
-    FeatureWebsiteVisitCheck: "redFish_FeatureWebsiteVisitCheck233",
-    FeatureExtensionWebsiteCheck: "redFish_FeatureExtensionWebsiteCheck233",
-    FeatureCacheFetchedData: "redFish_FeatureCacheFetchedData233"
+    Token: "redFish_accountToken123",
+    Power: "redFish_power123",
+    CacheStorage: "redFish_cacheStorage123",
+    Statistics: "redFish_statistics123",
+    FeatureEmailChecker: "redFish_FeatureEmailChecker123",
+    FeatureWebsiteVisitCheck: "redFish_FeatureWebsiteVisitCheck123",
+    FeatureExtensionWebsiteCheck: "redFish_FeatureExtensionWebsiteCheck123",
+    FeatureCacheFetchedData: "redFish_FeatureCacheFetchedData123"
 }
